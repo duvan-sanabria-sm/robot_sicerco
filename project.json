@@ -5,18 +5,19 @@
   "main": "Main.xaml",
   "dependencies": {
     "UiPath.Database.Activities": "1.9.0",
-    "UiPath.Excel.Activities": "[2.23.4]",
-    "UiPath.Mail.Activities": "[1.23.1]",
+    "UiPath.Excel.Activities": "[2.24.4]",
+    "UiPath.Mail.Activities": "[1.24.2]",
     "UiPath.MicrosoftOffice365.Activities": "[2.7.24]",
-    "UiPath.System.Activities": "[24.10.6]",
-    "UiPath.Testing.Activities": "[24.10.0]",
-    "UiPath.UIAutomation.Activities": "[24.10.0]"
+    "UiPath.System.Activities": "[24.11.0-preview]",
+    "UiPath.System.Activities.Runtime": "[24.11.0-preview]",
+    "UiPath.Testing.Activities": "[24.10.3]",
+    "UiPath.UIAutomation.Activities.Runtime": "[24.10.10]"
   },
   "webServices": [],
   "entitiesStores": [],
   "schemaVersion": "4.0",
   "studioVersion": "24.10.1.0",
-  "projectVersion": "1.0.0",
+  "projectVersion": "1.0.5",
   "runtimeOptions": {
     "autoDispose": false,
     "netFrameworkLazyLoading": false,
@@ -46,7 +47,12 @@
       "ignoredFiles": []
     },
     "fileInfoCollection": [],
-    "saveToCloud": false
+    "saveToCloud": false,
+    "cloudProjectUrl": "https://cloud.uipath.com/servilnsjitn/studio_/designer/b1a74160-b8e0-4316-8e99-b4805b9cb171"
+  },
+  "arguments": {
+    "input": [],
+    "output": []
   },
   "expressionLanguage": "VisualBasic",
   "entryPoints": [
