@@ -1,0 +1,18 @@
+﻿{
+  "Version": "1.0",
+  "Metadata": [
+    {
+      "ApplicationType": "WindowsApplication",
+      "ExecutablePath": {
+        "Value": "excel.exe",
+        "IsExpression": false
+      },
+      "Url": null,
+      "Arguments": {
+        "Value": "\\\\10.10.15.120\\DatosRetie\\RETIEDICTAMENES\\3. EMISIÓN\\Emisión 2024\\Pruebas Camilo\\EMISION 2024.xlsm",
+        "IsExpression": false
+      },
+      "Version": null
+    }
+  ]
+}
