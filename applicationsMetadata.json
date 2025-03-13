@@ -4,13 +4,39 @@
     {
       "ApplicationType": "WindowsApplication",
       "ExecutablePath": {
+        "Value": "java*.exe",
+        "IsExpression": false
+      },
+      "Url": null,
+      "Arguments": {
+        "Value": "-jar \"\"\\\\10.10.15.120\\DatosRetie\\RETIEDICTAMENES\\1. SICERCO RETIE\\2. CARGUE A SICERCO\\2025\\0. CargueMasivo sicerco\\GeneradorCertificados.jar\"\" ",
+        "IsExpression": false
+      },
+      "Version": null
+    },
+    {
+      "ApplicationType": "Edge",
+      "ExecutablePath": {
+        "Value": "msedge.exe",
+        "IsExpression": false
+      },
+      "Url": {
+        "Value": "https://sicerco.sic.gov.co",
+        "IsExpression": false
+      },
+      "Arguments": null,
+      "Version": null
+    },
+    {
+      "ApplicationType": "WindowsApplication",
+      "ExecutablePath": {
         "Value": "excel.exe",
         "IsExpression": false
       },
       "Url": null,
       "Arguments": {
-        "Value": "\\\\10.10.15.120\\DatosRetie\\RETIEDICTAMENES\\3. EMISIÓN\\Emisión 2024\\Pruebas Camilo\\EMISION 2024.xlsm",
-        "IsExpression": false
+        "Value": "current_folder + \"\\\" + \"estructuraCargueMasivo.xlsx\"",
+        "IsExpression": true
       },
       "Version": null
     }
