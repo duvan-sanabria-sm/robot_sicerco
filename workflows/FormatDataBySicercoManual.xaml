@@ -104,7 +104,7 @@
       <x:Boolean x:Key="ShouldExpandAll">True</x:Boolean>
     </scg:Dictionary>
   </sap:WorkflowViewStateService.ViewState>
-  <Sequence DisplayName="FormatDataBySicercoManual" sap:VirtualizedContainerService.HintSize="981,592.04" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="FormatDataBySicercoManual" sap:VirtualizedContainerService.HintSize="964,8693" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="ui:DatabaseConnection" Name="connect_database" />
       <Variable x:TypeArguments="sd:DataTable" Name="table" />
@@ -115,39 +115,29 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="726,6022" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+    <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="948,8670" sap2010:WorkflowViewState.IdRef="TryCatch_1">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsPinned">False</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
       <TryCatch.Try>
-        <Sequence DisplayName="Conector ODBC a un documento de Excel" sap:VirtualizedContainerService.HintSize="688,5296" sap2010:WorkflowViewState.IdRef="Sequence_2">
+        <Sequence DisplayName="Conector ODBC a un documento de Excel" sap:VirtualizedContainerService.HintSize="910,7921" sap2010:WorkflowViewState.IdRef="Sequence_2">
+          <Sequence.Variables>
+            <Variable x:TypeArguments="x:String" Name="emission_path" />
+          </Sequence.Variables>
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               <x:Boolean x:Key="IsPinned">False</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="654,254" sap2010:WorkflowViewState.IdRef="CommentOut_5">
-            <ui:CommentOut.Body>
-              <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="416,143" sap2010:WorkflowViewState.IdRef="Sequence_28">
-                <sap:WorkflowViewStateService.ViewState>
-                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                  </scg:Dictionary>
-                </sap:WorkflowViewStateService.ViewState>
-                <ui:DatabaseConnect DisplayName="Conectar ODBC con el Excel (Personal)" sap:VirtualizedContainerService.HintSize="382,83" sap2010:WorkflowViewState.IdRef="DatabaseConnect_1" ProviderName="System.Data.Odbc" ConnectionString="Dsn=Emisión 2025;dbq=P:\EMISION 2025.xlsm;defaultdir=P:;driverid=1046;fil=excel 12.0;maxbuffersize=2048;pagetimeout=5" DatabaseConnection="[connect_database]">
-                  <sap:WorkflowViewStateService.ViewState>
-                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                    </scg:Dictionary>
-                  </sap:WorkflowViewStateService.ViewState>
-                </ui:DatabaseConnect>
-              </Sequence>
-            </ui:CommentOut.Body>
-          </ui:CommentOut>
-          <ui:DatabaseConnect DisplayName="Conectar ODBC con el Excel (Robots)" sap:VirtualizedContainerService.HintSize="654,92" sap2010:WorkflowViewState.IdRef="DatabaseConnect_3" ProviderName="System.Data.Odbc" ConnectionString="Dsn=Emisión 2025;dbq=Z:\EMISION 2025.xlsm;defaultdir=Z:;driverid=1046;fil=excel 12.0;maxbuffersize=2048;pagetimeout=5" DatabaseConnection="[connect_database]">
+          <ui:GetRobotAsset TimeoutMS="{x:Null}" AssetName="Ruta Emisión" CacheStrategy="None" DisplayName="Get Asset" FolderPath="Servimeters/Retie/Dictámenes" sap:VirtualizedContainerService.HintSize="876,175" sap2010:WorkflowViewState.IdRef="GetRobotAsset_1">
+            <ui:GetRobotAsset.Value>
+              <OutArgument x:TypeArguments="x:String">[emission_path]</OutArgument>
+            </ui:GetRobotAsset.Value>
+          </ui:GetRobotAsset>
+          <ui:DatabaseConnect DisplayName="Conectar ODBC con el Excel" sap:VirtualizedContainerService.HintSize="876,92" sap2010:WorkflowViewState.IdRef="DatabaseConnect_3" ProviderName="System.Data.Odbc" ConnectionString="[emission_path]" DatabaseConnection="[connect_database]">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsPinned">False</x:Boolean>
@@ -155,7 +145,7 @@
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
           </ui:DatabaseConnect>
-          <Sequence DisplayName="Modificar datos con un formato estándar" sap:VirtualizedContainerService.HintSize="654,489" sap2010:WorkflowViewState.IdRef="Sequence_3">
+          <Sequence DisplayName="Modificar datos con un formato estándar" sap:VirtualizedContainerService.HintSize="876,489" sap2010:WorkflowViewState.IdRef="Sequence_3">
             <Sequence.Variables>
               <Variable x:TypeArguments="x:String" Name="fecha_formateada" />
               <Variable x:TypeArguments="s:DateTime" Name="current_date" />
@@ -201,7 +191,7 @@
               </sap:WorkflowViewStateService.ViewState>
             </ui:ExecuteQuery>
           </Sequence>
-          <Sequence DisplayName="Almacenar nueva identificación en una tabla nueva" sap:VirtualizedContainerService.HintSize="654,2640" sap2010:WorkflowViewState.IdRef="Sequence_4">
+          <Sequence DisplayName="Almacenar nueva identificación en una tabla nueva" sap:VirtualizedContainerService.HintSize="876,5344" sap2010:WorkflowViewState.IdRef="Sequence_4">
             <Sequence.Variables>
               <Variable x:TypeArguments="x:String" Name="identification_number" />
               <Variable x:TypeArguments="sd:DataTable" Name="new_sicerco_table" />
@@ -215,7 +205,7 @@
                 <x:Boolean x:Key="IsPinned">False</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <Sequence DisplayName="Construcción tabla de datos y consulta datos sicerco" sap:VirtualizedContainerService.HintSize="620,518" sap2010:WorkflowViewState.IdRef="Sequence_12">
+            <Sequence DisplayName="Construcción tabla de datos y consulta datos sicerco" sap:VirtualizedContainerService.HintSize="842,518" sap2010:WorkflowViewState.IdRef="Sequence_12">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -252,20 +242,20 @@
                 </sap:WorkflowViewStateService.ViewState>
               </ui:InvokeCode>
             </Sequence>
-            <Sequence DisplayName="Consulta de Municipio y Departamento por Identificación" sap:VirtualizedContainerService.HintSize="620,1982" sap2010:WorkflowViewState.IdRef="Sequence_13">
+            <Sequence DisplayName="Consulta de Municipio y Departamento por Identificación" sap:VirtualizedContainerService.HintSize="842,4686" sap2010:WorkflowViewState.IdRef="Sequence_13">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                   <x:Boolean x:Key="IsPinned">False</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[registration_identification_number]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="586,1890" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
+              <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[registration_identification_number]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="808,4594" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
                 <ui:ForEachRow.Body>
                   <ActivityAction x:TypeArguments="sd:DataRow">
                     <ActivityAction.Argument>
                       <DelegateInArgument x:TypeArguments="sd:DataRow" Name="CurrentRow" />
                     </ActivityAction.Argument>
-                    <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="552,1703" sap2010:WorkflowViewState.IdRef="Sequence_17">
+                    <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="774,4407" sap2010:WorkflowViewState.IdRef="Sequence_17">
                       <Sequence.Variables>
                         <Variable x:TypeArguments="sd:DataRow" Name="newRow" />
                         <Variable x:TypeArguments="sd:DataTable" Name="regional_table" />
@@ -276,7 +266,7 @@
                           <x:Boolean x:Key="IsPinned">False</x:Boolean>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
-                      <Assign sap:VirtualizedContainerService.HintSize="518,114" sap2010:WorkflowViewState.IdRef="Assign_2">
+                      <Assign sap:VirtualizedContainerService.HintSize="740,114" sap2010:WorkflowViewState.IdRef="Assign_2">
                         <Assign.To>
                           <OutArgument x:TypeArguments="sd:DataRow">[newRow]</OutArgument>
                         </Assign.To>
@@ -289,7 +279,7 @@
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
                       </Assign>
-                      <Assign sap:VirtualizedContainerService.HintSize="518,114" sap2010:WorkflowViewState.IdRef="Assign_3">
+                      <Assign sap:VirtualizedContainerService.HintSize="740,114" sap2010:WorkflowViewState.IdRef="Assign_3">
                         <Assign.To>
                           <OutArgument x:TypeArguments="x:Object">[newRow("Número")]</OutArgument>
                         </Assign.To>
@@ -302,7 +292,7 @@
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
                       </Assign>
-                      <Assign sap:VirtualizedContainerService.HintSize="518,114" sap2010:WorkflowViewState.IdRef="Assign_4">
+                      <Assign sap:VirtualizedContainerService.HintSize="740,114" sap2010:WorkflowViewState.IdRef="Assign_4">
                         <Assign.To>
                           <OutArgument x:TypeArguments="x:String">[identification]</OutArgument>
                         </Assign.To>
@@ -315,8 +305,8 @@
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
                       </Assign>
-                      <ui:Comment sap:VirtualizedContainerService.HintSize="518,203" sap2010:WorkflowViewState.IdRef="Comment_4" Text="&#xA;//1. Obtiene los valores limpios de la columna Municipio (sin los textos entre paréntesis).&#xA;&#xA;//2. Filtra los datos para incluir únicamente las filas donde el valor de la columna [Consecutivo] coincide con la variable identification." />
-                      <ui:ExecuteQuery ContinueOnError="{x:Null}" TimeoutMS="{x:Null}" DataTable="[regional_table]" DisplayName="Run Query" ExistingDbConnection="[connect_database]" sap:VirtualizedContainerService.HintSize="518,146" sap2010:WorkflowViewState.IdRef="ExecuteQuery_4" Sql="[&quot;SELECT &quot; &amp; _&#xA;&quot;TRIM(LEFT([Municipio], INSTR([Municipio] + '(', '(') - 1)) AS MunicipioLimpio, &quot; &amp; _&#xA;&quot;REPLACE([Departamento], '_', ' ') AS DepartamentoLimpio &quot; &amp; _&#xA;&quot;FROM [EMISION$] &quot; &amp; _&#xA;&quot;WHERE [Consecutivo] = '&quot; + identification + &quot;';&quot;]">
+                      <ui:Comment sap:VirtualizedContainerService.HintSize="740,203" sap2010:WorkflowViewState.IdRef="Comment_4" Text="&#xA;//1. Obtiene los valores limpios de la columna Municipio (sin los textos entre paréntesis).&#xA;&#xA;//2. Filtra los datos para incluir únicamente las filas donde el valor de la columna [Consecutivo] coincide con la variable identification." />
+                      <ui:ExecuteQuery ContinueOnError="{x:Null}" TimeoutMS="{x:Null}" DataTable="[regional_table]" DisplayName="Run Query" ExistingDbConnection="[connect_database]" sap:VirtualizedContainerService.HintSize="740,146" sap2010:WorkflowViewState.IdRef="ExecuteQuery_4" Sql="[&quot;SELECT &quot; &amp; _&#xA;&quot;TRIM(LEFT([Municipio], INSTR([Municipio] + '(', '(') - 1)) AS MunicipioLimpio, &quot; &amp; _&#xA;&quot;REPLACE([Departamento], '_', ' ') AS DepartamentoLimpio &quot; &amp; _&#xA;&quot;FROM [EMISION$] &quot; &amp; _&#xA;&quot;WHERE [Consecutivo] = '&quot; + identification + &quot;';&quot;]">
                         <ui:ExecuteQuery.Parameters>
                           <InArgument x:TypeArguments="x:String" x:Key="identification">[identification]</InArgument>
                         </ui:ExecuteQuery.Parameters>
@@ -326,13 +316,13 @@
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
                       </ui:ExecuteQuery>
-                      <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[regional_table]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="518,952" sap2010:WorkflowViewState.IdRef="ForEachRow_3">
+                      <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[regional_table]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="740,3656" sap2010:WorkflowViewState.IdRef="ForEachRow_3">
                         <ui:ForEachRow.Body>
                           <ActivityAction x:TypeArguments="sd:DataRow">
                             <ActivityAction.Argument>
                               <DelegateInArgument x:TypeArguments="sd:DataRow" Name="CurrentRow" />
                             </ActivityAction.Argument>
-                            <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="484,765" sap2010:WorkflowViewState.IdRef="Sequence_5">
+                            <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="706,3469" sap2010:WorkflowViewState.IdRef="Sequence_5">
                               <Sequence.Variables>
                                 <Variable x:TypeArguments="x:String" Name="departament" />
                                 <Variable x:TypeArguments="sd:DataTable" Name="code_data_table" />
@@ -345,14 +335,14 @@
                                   <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                 </scg:Dictionary>
                               </sap:WorkflowViewStateService.ViewState>
-                              <Sequence DisplayName="Preparar datos parámetros consultas" sap:VirtualizedContainerService.HintSize="450,254" sap2010:WorkflowViewState.IdRef="Sequence_18">
+                              <Sequence DisplayName="Preparar datos parámetros consultas" sap:VirtualizedContainerService.HintSize="672,425" sap2010:WorkflowViewState.IdRef="Sequence_18">
                                 <sap:WorkflowViewStateService.ViewState>
                                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                     <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                   </scg:Dictionary>
                                 </sap:WorkflowViewStateService.ViewState>
-                                <Assign sap:VirtualizedContainerService.HintSize="416,57" sap2010:WorkflowViewState.IdRef="Assign_8">
+                                <Assign sap:VirtualizedContainerService.HintSize="434,114" sap2010:WorkflowViewState.IdRef="Assign_8">
                                   <Assign.To>
                                     <OutArgument x:TypeArguments="x:Object">[newRow("Municipio")]</OutArgument>
                                   </Assign.To>
@@ -366,7 +356,7 @@
                                     </scg:Dictionary>
                                   </sap:WorkflowViewStateService.ViewState>
                                 </Assign>
-                                <Assign sap:VirtualizedContainerService.HintSize="416,57" sap2010:WorkflowViewState.IdRef="Assign_9">
+                                <Assign sap:VirtualizedContainerService.HintSize="434,114" sap2010:WorkflowViewState.IdRef="Assign_9">
                                   <Assign.To>
                                     <OutArgument x:TypeArguments="x:String">[municipality]</OutArgument>
                                   </Assign.To>
@@ -380,7 +370,7 @@
                                     </scg:Dictionary>
                                   </sap:WorkflowViewStateService.ViewState>
                                 </Assign>
-                                <Assign sap:VirtualizedContainerService.HintSize="416,48" sap2010:WorkflowViewState.IdRef="Assign_10">
+                                <Assign sap:VirtualizedContainerService.HintSize="434,105" sap2010:WorkflowViewState.IdRef="Assign_10">
                                   <Assign.To>
                                     <OutArgument x:TypeArguments="x:Object">[newRow("Departamento")]</OutArgument>
                                   </Assign.To>
@@ -394,34 +384,29 @@
                                   </sap:WorkflowViewStateService.ViewState>
                                 </Assign>
                               </Sequence>
-                              <Sequence DisplayName="Conexión y consulta código departamento" sap:VirtualizedContainerService.HintSize="450,346" sap2010:WorkflowViewState.IdRef="Sequence_19">
+                              <Sequence DisplayName="Conexión y consulta código departamento" sap:VirtualizedContainerService.HintSize="672,610" sap2010:WorkflowViewState.IdRef="Sequence_19">
+                                <Sequence.Variables>
+                                  <Variable x:TypeArguments="x:String" Name="bulk_upload_file" />
+                                </Sequence.Variables>
                                 <sap:WorkflowViewStateService.ViewState>
                                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                     <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                   </scg:Dictionary>
                                 </sap:WorkflowViewStateService.ViewState>
-                                <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="416,57" sap2010:WorkflowViewState.IdRef="CommentOut_6">
-                                  <ui:CommentOut.Body>
-                                    <Sequence DisplayName="Ignored Activities" sap2010:WorkflowViewState.IdRef="Sequence_29">
-                                      <ui:DatabaseConnect DisplayName="Connect to Database (Personal)" sap:VirtualizedContainerService.HintSize="416,92" sap2010:WorkflowViewState.IdRef="DatabaseConnect_2" ProviderName="System.Data.Odbc" ConnectionString="Dsn=codigosCargueMasivo;dbq=T:\codigosCargueMasivo.xlsx;defaultdir=T:;driverid=1046;fil=excel 12.0;maxbuffersize=2048;pagetimeout=5" DatabaseConnection="[second_database_connection]">
-                                        <sap:WorkflowViewStateService.ViewState>
-                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                            <x:Boolean x:Key="IsPinned">True</x:Boolean>
-                                          </scg:Dictionary>
-                                        </sap:WorkflowViewStateService.ViewState>
-                                      </ui:DatabaseConnect>
-                                    </Sequence>
-                                  </ui:CommentOut.Body>
-                                </ui:CommentOut>
-                                <ui:DatabaseConnect DisplayName="Connect to Database (Robots)" sap:VirtualizedContainerService.HintSize="416,92" sap2010:WorkflowViewState.IdRef="DatabaseConnect_4" ProviderName="System.Data.Odbc" ConnectionString="Dsn=codigosCargueMasivo;dbq=Q:\codigosCargueMasivo.xlsx;defaultdir=Q:;driverid=1046;fil=excel 12.0;maxbuffersize=2048;pagetimeout=5" DatabaseConnection="[second_database_connection]">
+                                <ui:GetRobotAsset TimeoutMS="{x:Null}" AssetName="Ruta Código Cargue Masivo" CacheStrategy="None" DisplayName="Get Asset" FolderPath="Servimeters/Retie/Dictámenes" sap:VirtualizedContainerService.HintSize="434,175" sap2010:WorkflowViewState.IdRef="GetRobotAsset_2">
+                                  <ui:GetRobotAsset.Value>
+                                    <OutArgument x:TypeArguments="x:String">[bulk_upload_file]</OutArgument>
+                                  </ui:GetRobotAsset.Value>
+                                </ui:GetRobotAsset>
+                                <ui:DatabaseConnect DisplayName="Connect to Database" sap:VirtualizedContainerService.HintSize="434,92" sap2010:WorkflowViewState.IdRef="DatabaseConnect_4" ProviderName="System.Data.Odbc" ConnectionString="[bulk_upload_file]" DatabaseConnection="[second_database_connection]">
                                   <sap:WorkflowViewStateService.ViewState>
                                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                      <x:Boolean x:Key="IsPinned">True</x:Boolean>
+                                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                     </scg:Dictionary>
                                   </sap:WorkflowViewStateService.ViewState>
                                 </ui:DatabaseConnect>
-                                <Assign sap:VirtualizedContainerService.HintSize="416,57" sap2010:WorkflowViewState.IdRef="Assign_11">
+                                <Assign sap:VirtualizedContainerService.HintSize="434,114" sap2010:WorkflowViewState.IdRef="Assign_11">
                                   <Assign.To>
                                     <OutArgument x:TypeArguments="x:String">[departament]</OutArgument>
                                   </Assign.To>
@@ -434,7 +419,7 @@
                                     </scg:Dictionary>
                                   </sap:WorkflowViewStateService.ViewState>
                                 </Assign>
-                                <ui:ExecuteQuery ContinueOnError="{x:Null}" TimeoutMS="{x:Null}" DataTable="[code_data_table]" DisplayName="Run Query" ExistingDbConnection="[second_database_connection]" sap:VirtualizedContainerService.HintSize="416,48" sap2010:WorkflowViewState.IdRef="ExecuteQuery_5" Sql="[&quot;SELECT [VALOR_JSON] FROM [DEPARTAMENTO$] WHERE NOMBRE_CAMPO = '&quot; + departament + &quot;'&quot;]">
+                                <ui:ExecuteQuery ContinueOnError="{x:Null}" TimeoutMS="{x:Null}" DataTable="[code_data_table]" DisplayName="Run Query" ExistingDbConnection="[second_database_connection]" sap:VirtualizedContainerService.HintSize="434,137" sap2010:WorkflowViewState.IdRef="ExecuteQuery_5" Sql="[&quot;SELECT [VALOR_JSON] FROM [DEPARTAMENTO$] WHERE NOMBRE_CAMPO = '&quot; + departament + &quot;'&quot;]">
                                   <ui:ExecuteQuery.Parameters>
                                     <InArgument x:TypeArguments="x:String" x:Key="municipio">[CurrentRow("MunicipioLimpio").ToString]</InArgument>
                                     <InArgument x:TypeArguments="x:String" x:Key="departamento">[CurrentRow("DepartamentoLimpio").ToString]</InArgument>
@@ -446,7 +431,7 @@
                                   </sap:WorkflowViewStateService.ViewState>
                                 </ui:ExecuteQuery>
                               </Sequence>
-                              <Sequence DisplayName="Validar digitos iniciales codigos departamentos" sap:VirtualizedContainerService.HintSize="450,57" sap2010:WorkflowViewState.IdRef="Sequence_20">
+                              <Sequence DisplayName="Validar digitos iniciales codigos departamentos" sap:VirtualizedContainerService.HintSize="672,2326" sap2010:WorkflowViewState.IdRef="Sequence_20">
                                 <sap:WorkflowViewStateService.ViewState>
                                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -680,7 +665,7 @@
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
-                    <ui:OutputDataTable DataTable="[sicerco_record]" DisplayName="Output Data Table as Text" sap:VirtualizedContainerService.HintSize="382,103" sap2010:WorkflowViewState.IdRef="OutputDataTable_1" Text="[variable1]">
+                    <ui:OutputDataTable DataTable="[sicerco_record]" DisplayName="Output Data Table as Text" sap:VirtualizedContainerService.HintSize="382,103" sap2010:WorkflowViewState.IdRef="OutputDataTable_1" Text="[emission_Path]">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                           <x:Boolean x:Key="IsPinned">False</x:Boolean>
@@ -706,7 +691,7 @@
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
-                    <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="382,113" sap2010:WorkflowViewState.IdRef="WriteLine_2" Text="[&quot;sicerco_record:&quot;+variable1]" />
+                    <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="382,113" sap2010:WorkflowViewState.IdRef="WriteLine_2" Text="[&quot;sicerco_record:&quot;+emission_Path]" />
                   </Sequence>
                 </ui:CommentOut.Body>
                 <sap:WorkflowViewStateService.ViewState>
