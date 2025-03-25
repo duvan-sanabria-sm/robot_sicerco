@@ -347,7 +347,7 @@
                   <av:PointCollection x:Key="ConnectorLocation">630,495 630,535</av:PointCollection>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <Sequence DisplayName="Generar informe por cada carpeta" sap:VirtualizedContainerService.HintSize="711,7118" sap2010:WorkflowViewState.IdRef="Sequence_545">
+              <Sequence DisplayName="Generar informe por cada carpeta" sap:VirtualizedContainerService.HintSize="110,70" sap2010:WorkflowViewState.IdRef="Sequence_545">
                 <Sequence.Variables>
                   <Variable x:TypeArguments="x:String" Name="variable1" />
                   <Variable x:TypeArguments="sd:DataTable" Name="filtered_datatable" />
@@ -1099,149 +1099,81 @@
                           <av:Size x:Key="ShapeSize">110,70</av:Size>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
-                      <Sequence DisplayName="Validar información de la factura de venta con relación a la orden de servicio" sap:VirtualizedContainerService.HintSize="110,70" sap2010:WorkflowViewState.IdRef="Sequence_128">
-                        <sap:WorkflowViewStateService.ViewState>
-                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                          </scg:Dictionary>
-                        </sap:WorkflowViewStateService.ViewState>
-                        <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Edge: SICERCO" HealingAgentBehavior="Job" sap:VirtualizedContainerService.HintSize="586,4733" sap2010:WorkflowViewState.IdRef="NApplicationCard_2" InteractionMode="DebuggerApi" IsDisplayNameAuto="True" OpenMode="Always" ScopeGuid="da35983c-f447-4bcc-b699-44b91a5a7f25" Version="V2">
-                          <uix:NApplicationCard.Body>
-                            <ActivityAction x:TypeArguments="x:Object">
-                              <ActivityAction.Argument>
-                                <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
-                              </ActivityAction.Argument>
-                              <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="552,4493" sap2010:WorkflowViewState.IdRef="Sequence_211">
-                                <Sequence.Variables>
-                                  <Variable x:TypeArguments="x:String" Name="user" />
-                                  <Variable x:TypeArguments="ss:SecureString" Name="password" />
-                                  <Variable x:TypeArguments="x:Boolean" Name="validate_file_upload" />
-                                </Sequence.Variables>
-                                <sap:WorkflowViewStateService.ViewState>
-                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                  </scg:Dictionary>
-                                </sap:WorkflowViewStateService.ViewState>
-                                <ui:GetRobotCredential TimeoutMS="{x:Null}" AssetName="Credenciales Plataforma Sicerco" CacheStrategy="None" DisplayName="Get Credential" FolderPath="Servimeters/Retie/Dictámenes" sap:VirtualizedContainerService.HintSize="518,175" sap2010:WorkflowViewState.IdRef="GetRobotCredential_1" Password="[password]" Username="[user]" />
-                                <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Usuario *'" EmptyFieldMode="SingleLine" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="518,286" sap2010:WorkflowViewState.IdRef="NTypeInto_1" ScopeIdentifier="da35983c-f447-4bcc-b699-44b91a5a7f25" Text="[user]" Version="V4">
-                                  <uix:NTypeInto.Target>
-                                    <uix:TargetAnchorable BrowserURL="sicerco.sic.gov.co/sicerco/index.xhtml" CVScreenId="e000268a-681e-4a79-aed8-cabe08dc2064" CvElementArea="540, 248, 222, 31" CvType="InputBox" DesignTimeRectangle="541, 249, 220, 30" DesignTimeScaleFactor="1" ElementType="InputBox" FuzzySelectorArgument="&lt;webctrl id='loginPrincipal:infoLogin' tag='TABLE' /&gt;&lt;webctrl id='loginPrincipal:usuario' type='text' tag='INPUT' class='ui-inputfield ui-inputtext ui-widget ui-state-default ui-corner-all ui-state-filled' placeholder='Ingrese el login' aaname='Usuario *' /&gt;" Guid="ad90423b-edea-4ff2-8dfc-b70dc676e0ba" InformativeScreenshot="89e6dc2c59ea5ed462fc954ced7f3ceb.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='msedge.exe' title='SICERCO' /&gt;" SearchSteps="FuzzySelector, CV" Version="V5" Visibility="Interactive">
-                                      <uix:TargetAnchorable.Anchors>
-                                        <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
-                                          <uix:Target CVScreenId="e000268a-681e-4a79-aed8-cabe08dc2064" CvTextArea="414, 251, 45, 13" CvTextArgument="Usuario" CvType="Text" DesignTimeRectangle="415, 249, 58, 20" ElementType="Text" FuzzySelectorArgument="&lt;webctrl id='loginPrincipal:infoLogin' tag='TABLE' /&gt;&lt;webctrl id='loginPrincipal:j_idt29' type='' tag='LABEL' class='ui-outputlabel ui-widget' aaname='Usuario ' check:innerText='Usuario *' /&gt;" Guid="7dc005d9-4cc1-4c9d-8afe-207789cda9ac" SearchSteps="FuzzySelector, CV" />
-                                        </scg:List>
-                                      </uix:TargetAnchorable.Anchors>
-                                    </uix:TargetAnchorable>
-                                  </uix:NTypeInto.Target>
-                                  <uix:NTypeInto.VerifyOptions>
-                                    <uix:VerifyExecutionTypeIntoOptions DisplayName="{x:Null}" Mode="Appears">
-                                      <uix:VerifyExecutionTypeIntoOptions.Retry>
-                                        <InArgument x:TypeArguments="x:Boolean" />
-                                      </uix:VerifyExecutionTypeIntoOptions.Retry>
-                                      <uix:VerifyExecutionTypeIntoOptions.Timeout>
-                                        <InArgument x:TypeArguments="x:Double" />
-                                      </uix:VerifyExecutionTypeIntoOptions.Timeout>
-                                    </uix:VerifyExecutionTypeIntoOptions>
-                                  </uix:NTypeInto.VerifyOptions>
-                                </uix:NTypeInto>
-                                <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Contraseña *'" EmptyFieldMode="SingleLine" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="518,286" sap2010:WorkflowViewState.IdRef="NTypeInto_2" IsPassword="True" ScopeIdentifier="da35983c-f447-4bcc-b699-44b91a5a7f25" SecureText="[password]" Version="V4">
-                                  <uix:NTypeInto.Target>
-                                    <uix:TargetAnchorable BrowserURL="sicerco.sic.gov.co/sicerco/index.xhtml" CVScreenId="d996af2a-31fd-475f-8805-4d8762475400" CvElementArea="539, 315, 223, 31" CvType="InputBox" DesignTimeRectangle="541, 316, 220, 30" DesignTimeScaleFactor="1" ElementType="InputBoxPassword" FuzzySelectorArgument="&lt;webctrl id='loginPrincipal:infoLogin' tag='TABLE' /&gt;&lt;webctrl id='loginPrincipal:password' type='password' tag='INPUT' class='ui-password ui-inputfield ui-widget ui-state-default ui-corner-all' placeholder='Ingrese la contraseña' aaname='Contraseña *' /&gt;" Guid="e17f776f-b38e-4bd1-b73c-ed03309b3b7a" InformativeScreenshot="f37b71dc5a519d3fae32265d0d0cae7c.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='SICERCO' /&gt;" SearchSteps="FuzzySelector, CV" Version="V5" Visibility="Interactive">
-                                      <uix:TargetAnchorable.Anchors>
-                                        <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
-                                          <uix:Target CVScreenId="d996af2a-31fd-475f-8805-4d8762475400" CvTextArea="414, 318, 82, 13" CvTextArgument="Contrasena *" CvType="Text" DesignTimeRectangle="415, 316, 81, 20" ElementType="Text" FuzzySelectorArgument="&lt;webctrl id='loginPrincipal:infoLogin' tag='TABLE' /&gt;&lt;webctrl id='loginPrincipal:j_idt37' type='' tag='LABEL' class='ui-outputlabel ui-widget' aaname='Contraseña ' check:innerText='Contraseña *' /&gt;" Guid="05fb1113-fa58-4c21-82f0-4ad1352a95ea" SearchSteps="FuzzySelector, CV" />
-                                        </scg:List>
-                                      </uix:TargetAnchorable.Anchors>
-                                    </uix:TargetAnchorable>
-                                  </uix:NTypeInto.Target>
-                                  <uix:NTypeInto.VerifyOptions>
-                                    <uix:VerifyExecutionTypeIntoOptions DisplayName="{x:Null}" Mode="Appears">
-                                      <uix:VerifyExecutionTypeIntoOptions.Retry>
-                                        <InArgument x:TypeArguments="x:Boolean" />
-                                      </uix:VerifyExecutionTypeIntoOptions.Retry>
-                                      <uix:VerifyExecutionTypeIntoOptions.Timeout>
-                                        <InArgument x:TypeArguments="x:Double" />
-                                      </uix:VerifyExecutionTypeIntoOptions.Timeout>
-                                    </uix:VerifyExecutionTypeIntoOptions>
-                                  </uix:NTypeInto.VerifyOptions>
-                                </uix:NTypeInto>
-                                <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Es necesaria una verifi…'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="518,225" sap2010:WorkflowViewState.IdRef="NClick_4" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="da35983c-f447-4bcc-b699-44b91a5a7f25" Version="V4">
-                                  <uix:NClick.Target>
-                                    <uix:TargetAnchorable BrowserURL="sicerco.sic.gov.co/sicerco/index.xhtml" CVScreenId="366b0381-9d45-4008-8632-7137c2b33b34" CvElementArea="454, 604, 30, 29" CvType="CheckBox" DesignTimeRectangle="455, 605, 28, 28" DesignTimeScaleFactor="1" FuzzySelectorArgument="&lt;webctrl id='loginPrincipal:infoLogin' tag='TABLE' /&gt;&lt;webctrl tag='IFRAME' /&gt;&lt;webctrl aria-role='presentation' tag='DIV' type='' class='recaptcha-checkbox-border' aaname='' /&gt;" Guid="3ad496d4-f44e-41fd-afe3-9520a6ae3317" InformativeScreenshot="09d10602ae7b774d6b252326fe30edeb.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='SICERCO' /&gt;" SearchSteps="FuzzySelector, CV" Version="V5" Visibility="Interactive">
-                                      <uix:TargetAnchorable.Anchors>
-                                        <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
-                                          <uix:Target DesignTimeRectangle="442, 582, 302, 76" FuzzySelectorArgument="&lt;webctrl id='loginPrincipal:infoLogin' tag='TABLE' /&gt;&lt;webctrl tag='IFRAME' /&gt;&lt;webctrl id='rc-anchor-container' tag='DIV' type='' class='rc-anchor rc-anchor-normal rc-anchor-light' aaname='' check:innerText='No soy un robot&amp;#xA;reCAPTCHA&amp;#xA;Privacidad - Términos' /&gt;" Guid="7e34f5bb-2a83-4dd1-8e5e-b14730621a19" SearchSteps="FuzzySelector" />
-                                        </scg:List>
-                                      </uix:TargetAnchorable.Anchors>
-                                    </uix:TargetAnchorable>
-                                  </uix:NClick.Target>
-                                  <uix:NClick.VerifyOptions>
-                                    <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
-                                      <uix:VerifyExecutionOptions.Retry>
-                                        <InArgument x:TypeArguments="x:Boolean" />
-                                      </uix:VerifyExecutionOptions.Retry>
-                                      <uix:VerifyExecutionOptions.Timeout>
-                                        <InArgument x:TypeArguments="x:Double" />
-                                      </uix:VerifyExecutionOptions.Timeout>
-                                    </uix:VerifyExecutionOptions>
-                                  </uix:NClick.VerifyOptions>
-                                </uix:NClick>
-                                <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Ingresar'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="518,225" sap2010:WorkflowViewState.IdRef="NClick_5" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="da35983c-f447-4bcc-b699-44b91a5a7f25" Version="V4">
-                                  <uix:NClick.Target>
-                                    <uix:TargetAnchorable BrowserURL="sicerco.sic.gov.co/sicerco/index.xhtml" CVScreenId="d36a18d3-a323-4afe-9ca5-970714ef196c" CvElementArea="540, 666, 94, 28" CvType="Button" DesignTimeRectangle="543, 669, 88, 23" DesignTimeScaleFactor="1" ElementType="Text" FullSelectorArgument="&lt;webctrl id='loginPrincipal:infoLogin' tableRow='1' tag='TABLE' /&gt;&lt;webctrl aaname='Ingresar' tableRow='4' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl id='loginPrincipal:infoLogin' tag='TABLE' /&gt;&lt;webctrl aaname='Ingresar' type='' tag='SPAN' class='ui-button-text ui-c' check:innerText='Ingresar' /&gt;" Guid="98960dd8-c284-45b4-b009-6abe5c2bcefa" InformativeScreenshot="64c5327c1bb44caaccc5a2124066685b.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='SICERCO' /&gt;" SearchSteps="Selector, FuzzySelector, CV" Version="V5" Visibility="Interactive">
-                                      <uix:TargetAnchorable.Anchors>
-                                        <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
-                                          <uix:Target CVScreenId="d36a18d3-a323-4afe-9ca5-970714ef196c" CvElementArea="540, 666, 94, 28" CvType="Button" DesignTimeRectangle="542, 668, 90, 25" ElementType="Button" FuzzySelectorArgument="&lt;webctrl id='loginPrincipal:infoLogin' tag='TABLE' /&gt;&lt;webctrl id='loginPrincipal:btnIngresar' type='submit' tag='BUTTON' class='ui-button ui-widget ui-state-default ui-corner-all ui-button-text-icon-left' aaname='Ingresar' check:innerText='Ingresar' /&gt;" Guid="ea88d0ee-eb85-483d-bec0-44737c4cf68e" SearchSteps="FuzzySelector, CV" />
-                                        </scg:List>
-                                      </uix:TargetAnchorable.Anchors>
-                                    </uix:TargetAnchorable>
-                                  </uix:NClick.Target>
-                                  <uix:NClick.VerifyOptions>
-                                    <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
-                                      <uix:VerifyExecutionOptions.Retry>
-                                        <InArgument x:TypeArguments="x:Boolean" />
-                                      </uix:VerifyExecutionOptions.Retry>
-                                      <uix:VerifyExecutionOptions.Timeout>
-                                        <InArgument x:TypeArguments="x:Double" />
-                                      </uix:VerifyExecutionOptions.Timeout>
-                                    </uix:VerifyExecutionOptions>
-                                  </uix:NClick.VerifyOptions>
-                                </uix:NClick>
-                                <uix:NHover DisplayName="Hover 'Registrar Cargue Masivo'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="518,225" sap2010:WorkflowViewState.IdRef="NHover_1" ScopeIdentifier="da35983c-f447-4bcc-b699-44b91a5a7f25" Version="V4">
-                                  <uix:NHover.Target>
-                                    <uix:TargetAnchorable BrowserURL="sicerco.sic.gov.co/sicerco/seguridad/principal.xhtml" CVScreenId="231caa85-97be-4f21-8485-18550bf3e4e5" CvTextArea="312, 355, 158, 14" CvTextArgument="+ Registrar Cargue Masivo" CvType="Text" DesignTimeRectangle="305, 349, 186, 28" DesignTimeScaleFactor="1" ElementType="Text" FuzzySelectorArgument="&lt;webctrl aria-role='menuitem' tag='A' type='' class='ui-menuitem-link ui-submenu-link ui-corner-all ui-state-hover' aaname='Registrar Cargue Masivo' check:innerText='Registrar Cargue Masivo' /&gt;" Guid="51a838a1-abc8-4ca7-b1ed-7d3d63361874" InformativeScreenshot="ee09132289702b325c6c4caef43213e9.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='SICERCO' /&gt;" SearchSteps="FuzzySelector, CV" Version="V5" Visibility="Interactive">
-                                      <uix:TargetAnchorable.Anchors>
-                                        <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
-                                          <uix:Target DesignTimeRectangle="491, 349, 110, 28" ElementType="Text" FuzzySelectorArgument="&lt;webctrl aaname='Certificados' aria-role='menuitem' tag='A' type='' class='ui-menuitem-link ui-submenu-link ui-corner-all' check:innerText='Certificados' /&gt;" Guid="56f23b85-cc89-440d-8afe-6f907fa0f889" SearchSteps="FuzzySelector" />
-                                        </scg:List>
-                                      </uix:TargetAnchorable.Anchors>
-                                    </uix:TargetAnchorable>
-                                  </uix:NHover.Target>
-                                  <uix:NHover.VerifyOptions>
-                                    <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
-                                      <uix:VerifyExecutionOptions.Retry>
-                                        <InArgument x:TypeArguments="x:Boolean" />
-                                      </uix:VerifyExecutionOptions.Retry>
-                                      <uix:VerifyExecutionOptions.Timeout>
-                                        <InArgument x:TypeArguments="x:Double" />
-                                      </uix:VerifyExecutionOptions.Timeout>
-                                    </uix:VerifyExecutionOptions>
-                                  </uix:NHover.VerifyOptions>
-                                </uix:NHover>
-                                <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="518,387" sap2010:WorkflowViewState.IdRef="CommentOut_40">
-                                  <ui:CommentOut.Body>
-                                    <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="416,276" sap2010:WorkflowViewState.IdRef="Sequence_212">
+                      <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="110,70" sap2010:WorkflowViewState.IdRef="CommentOut_134">
+                        <ui:CommentOut.Body>
+                          <Sequence DisplayName="Ignored Activities" sap2010:WorkflowViewState.IdRef="Sequence_598">
+                            <Sequence DisplayName="Validar información de la factura de venta con relación a la orden de servicio" sap:VirtualizedContainerService.HintSize="110,70" sap2010:WorkflowViewState.IdRef="Sequence_597">
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                              <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Edge: SICERCO" HealingAgentBehavior="Job" sap:VirtualizedContainerService.HintSize="586,4733" sap2010:WorkflowViewState.IdRef="NApplicationCard_2" InteractionMode="DebuggerApi" IsDisplayNameAuto="True" OpenMode="Always" ScopeGuid="da35983c-f447-4bcc-b699-44b91a5a7f25" Version="V2">
+                                <uix:NApplicationCard.Body>
+                                  <ActivityAction x:TypeArguments="x:Object">
+                                    <ActivityAction.Argument>
+                                      <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+                                    </ActivityAction.Argument>
+                                    <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="552,4493" sap2010:WorkflowViewState.IdRef="Sequence_211">
+                                      <Sequence.Variables>
+                                        <Variable x:TypeArguments="x:String" Name="user" />
+                                        <Variable x:TypeArguments="ss:SecureString" Name="password" />
+                                        <Variable x:TypeArguments="x:Boolean" Name="validate_file_upload" />
+                                      </Sequence.Variables>
                                       <sap:WorkflowViewStateService.ViewState>
                                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                         </scg:Dictionary>
                                       </sap:WorkflowViewStateService.ViewState>
-                                      <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Registrar Cargue Masivo'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="382,216" sap2010:WorkflowViewState.IdRef="NClick_6" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="da35983c-f447-4bcc-b699-44b91a5a7f25" Version="V4">
-                                        <uix:NClick.Target>
-                                          <uix:TargetAnchorable BrowserURL="sicerco.sic.gov.co/sicerco/carguemasivo/administrarCargueMasivo.xhtml" CVScreenId="8620c854-708d-4444-ba81-4d3989a989b8" CvElementArea="469, 354, 17, 17" CvTextArea="312, 355, 158, 14" CvTextArgument="+ Registrar Cargue Masivo" CvType="ArrowButton" DesignTimeRectangle="305, 349, 186, 28" DesignTimeScaleFactor="1" ElementType="Text" FuzzySelectorArgument="&lt;webctrl aria-role='menuitem' tag='A' type='' class='ui-menuitem-link ui-submenu-link ui-corner-all' aaname='Registrar Cargue Masivo' check:innerText='Registrar Cargue Masivo' /&gt;" Guid="c162f8f4-9a97-4f07-9f14-5a5d3f5d1acb" InformativeScreenshot="6e6a468805dbeaa9c0f3113daa332103.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='SICERCO' /&gt;" SearchSteps="FuzzySelector, CV" Version="V5" Visibility="Interactive">
+                                      <ui:GetRobotCredential TimeoutMS="{x:Null}" AssetName="Credenciales Plataforma Sicerco" CacheStrategy="None" DisplayName="Get Credential" FolderPath="Servimeters/Retie/Dictámenes" sap:VirtualizedContainerService.HintSize="518,175" sap2010:WorkflowViewState.IdRef="GetRobotCredential_1" Password="[password]" Username="[user]" />
+                                      <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Usuario *'" EmptyFieldMode="SingleLine" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="518,286" sap2010:WorkflowViewState.IdRef="NTypeInto_1" ScopeIdentifier="da35983c-f447-4bcc-b699-44b91a5a7f25" Text="[user]" Version="V4">
+                                        <uix:NTypeInto.Target>
+                                          <uix:TargetAnchorable BrowserURL="sicerco.sic.gov.co/sicerco/index.xhtml" CVScreenId="e000268a-681e-4a79-aed8-cabe08dc2064" CvElementArea="540, 248, 222, 31" CvType="InputBox" DesignTimeRectangle="541, 249, 220, 30" DesignTimeScaleFactor="1" ElementType="InputBox" FuzzySelectorArgument="&lt;webctrl id='loginPrincipal:infoLogin' tag='TABLE' /&gt;&lt;webctrl id='loginPrincipal:usuario' type='text' tag='INPUT' class='ui-inputfield ui-inputtext ui-widget ui-state-default ui-corner-all ui-state-filled' placeholder='Ingrese el login' aaname='Usuario *' /&gt;" Guid="ad90423b-edea-4ff2-8dfc-b70dc676e0ba" InformativeScreenshot="89e6dc2c59ea5ed462fc954ced7f3ceb.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='msedge.exe' title='SICERCO' /&gt;" SearchSteps="FuzzySelector, CV" Version="V5" Visibility="Interactive">
                                             <uix:TargetAnchorable.Anchors>
                                               <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
-                                                <uix:Target CVScreenId="8620c854-708d-4444-ba81-4d3989a989b8" CvElementArea="580, 354, 16, 17" CvTextArea="498, 355, 83, 14" CvTextArgument="+ Certificados" CvType="ArrowButton" DesignTimeRectangle="491, 349, 110, 28" ElementType="Text" FuzzySelectorArgument="&lt;webctrl aaname='Certificados' aria-role='menuitem' tag='A' type='' class='ui-menuitem-link ui-submenu-link ui-corner-all' check:innerText='Certificados' /&gt;" Guid="955ba775-24ff-4301-8e17-02d192fa444b" SearchSteps="FuzzySelector, CV" />
+                                                <uix:Target CVScreenId="e000268a-681e-4a79-aed8-cabe08dc2064" CvTextArea="414, 251, 45, 13" CvTextArgument="Usuario" CvType="Text" DesignTimeRectangle="415, 249, 58, 20" ElementType="Text" FuzzySelectorArgument="&lt;webctrl id='loginPrincipal:infoLogin' tag='TABLE' /&gt;&lt;webctrl id='loginPrincipal:j_idt29' type='' tag='LABEL' class='ui-outputlabel ui-widget' aaname='Usuario ' check:innerText='Usuario *' /&gt;" Guid="7dc005d9-4cc1-4c9d-8afe-207789cda9ac" SearchSteps="FuzzySelector, CV" />
+                                              </scg:List>
+                                            </uix:TargetAnchorable.Anchors>
+                                          </uix:TargetAnchorable>
+                                        </uix:NTypeInto.Target>
+                                        <uix:NTypeInto.VerifyOptions>
+                                          <uix:VerifyExecutionTypeIntoOptions DisplayName="{x:Null}" Mode="Appears">
+                                            <uix:VerifyExecutionTypeIntoOptions.Retry>
+                                              <InArgument x:TypeArguments="x:Boolean" />
+                                            </uix:VerifyExecutionTypeIntoOptions.Retry>
+                                            <uix:VerifyExecutionTypeIntoOptions.Timeout>
+                                              <InArgument x:TypeArguments="x:Double" />
+                                            </uix:VerifyExecutionTypeIntoOptions.Timeout>
+                                          </uix:VerifyExecutionTypeIntoOptions>
+                                        </uix:NTypeInto.VerifyOptions>
+                                      </uix:NTypeInto>
+                                      <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Contraseña *'" EmptyFieldMode="SingleLine" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="518,286" sap2010:WorkflowViewState.IdRef="NTypeInto_2" IsPassword="True" ScopeIdentifier="da35983c-f447-4bcc-b699-44b91a5a7f25" SecureText="[password]" Version="V4">
+                                        <uix:NTypeInto.Target>
+                                          <uix:TargetAnchorable BrowserURL="sicerco.sic.gov.co/sicerco/index.xhtml" CVScreenId="d996af2a-31fd-475f-8805-4d8762475400" CvElementArea="539, 315, 223, 31" CvType="InputBox" DesignTimeRectangle="541, 316, 220, 30" DesignTimeScaleFactor="1" ElementType="InputBoxPassword" FuzzySelectorArgument="&lt;webctrl id='loginPrincipal:infoLogin' tag='TABLE' /&gt;&lt;webctrl id='loginPrincipal:password' type='password' tag='INPUT' class='ui-password ui-inputfield ui-widget ui-state-default ui-corner-all' placeholder='Ingrese la contraseña' aaname='Contraseña *' /&gt;" Guid="e17f776f-b38e-4bd1-b73c-ed03309b3b7a" InformativeScreenshot="f37b71dc5a519d3fae32265d0d0cae7c.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='SICERCO' /&gt;" SearchSteps="FuzzySelector, CV" Version="V5" Visibility="Interactive">
+                                            <uix:TargetAnchorable.Anchors>
+                                              <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                                <uix:Target CVScreenId="d996af2a-31fd-475f-8805-4d8762475400" CvTextArea="414, 318, 82, 13" CvTextArgument="Contrasena *" CvType="Text" DesignTimeRectangle="415, 316, 81, 20" ElementType="Text" FuzzySelectorArgument="&lt;webctrl id='loginPrincipal:infoLogin' tag='TABLE' /&gt;&lt;webctrl id='loginPrincipal:j_idt37' type='' tag='LABEL' class='ui-outputlabel ui-widget' aaname='Contraseña ' check:innerText='Contraseña *' /&gt;" Guid="05fb1113-fa58-4c21-82f0-4ad1352a95ea" SearchSteps="FuzzySelector, CV" />
+                                              </scg:List>
+                                            </uix:TargetAnchorable.Anchors>
+                                          </uix:TargetAnchorable>
+                                        </uix:NTypeInto.Target>
+                                        <uix:NTypeInto.VerifyOptions>
+                                          <uix:VerifyExecutionTypeIntoOptions DisplayName="{x:Null}" Mode="Appears">
+                                            <uix:VerifyExecutionTypeIntoOptions.Retry>
+                                              <InArgument x:TypeArguments="x:Boolean" />
+                                            </uix:VerifyExecutionTypeIntoOptions.Retry>
+                                            <uix:VerifyExecutionTypeIntoOptions.Timeout>
+                                              <InArgument x:TypeArguments="x:Double" />
+                                            </uix:VerifyExecutionTypeIntoOptions.Timeout>
+                                          </uix:VerifyExecutionTypeIntoOptions>
+                                        </uix:NTypeInto.VerifyOptions>
+                                      </uix:NTypeInto>
+                                      <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Es necesaria una verifi…'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="518,225" sap2010:WorkflowViewState.IdRef="NClick_4" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="da35983c-f447-4bcc-b699-44b91a5a7f25" Version="V4">
+                                        <uix:NClick.Target>
+                                          <uix:TargetAnchorable BrowserURL="sicerco.sic.gov.co/sicerco/index.xhtml" CVScreenId="366b0381-9d45-4008-8632-7137c2b33b34" CvElementArea="454, 604, 30, 29" CvType="CheckBox" DesignTimeRectangle="455, 605, 28, 28" DesignTimeScaleFactor="1" FuzzySelectorArgument="&lt;webctrl id='loginPrincipal:infoLogin' tag='TABLE' /&gt;&lt;webctrl tag='IFRAME' /&gt;&lt;webctrl aria-role='presentation' tag='DIV' type='' class='recaptcha-checkbox-border' aaname='' /&gt;" Guid="3ad496d4-f44e-41fd-afe3-9520a6ae3317" InformativeScreenshot="09d10602ae7b774d6b252326fe30edeb.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='SICERCO' /&gt;" SearchSteps="FuzzySelector, CV" Version="V5" Visibility="Interactive">
+                                            <uix:TargetAnchorable.Anchors>
+                                              <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                                <uix:Target DesignTimeRectangle="442, 582, 302, 76" FuzzySelectorArgument="&lt;webctrl id='loginPrincipal:infoLogin' tag='TABLE' /&gt;&lt;webctrl tag='IFRAME' /&gt;&lt;webctrl id='rc-anchor-container' tag='DIV' type='' class='rc-anchor rc-anchor-normal rc-anchor-light' aaname='' check:innerText='No soy un robot&amp;#xA;reCAPTCHA&amp;#xA;Privacidad - Términos' /&gt;" Guid="7e34f5bb-2a83-4dd1-8e5e-b14730621a19" SearchSteps="FuzzySelector" />
                                               </scg:List>
                                             </uix:TargetAnchorable.Anchors>
                                           </uix:TargetAnchorable>
@@ -1257,350 +1189,424 @@
                                           </uix:VerifyExecutionOptions>
                                         </uix:NClick.VerifyOptions>
                                       </uix:NClick>
-                                    </Sequence>
-                                  </ui:CommentOut.Body>
-                                  <sap:WorkflowViewStateService.ViewState>
-                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                      <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-                                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                                    </scg:Dictionary>
-                                  </sap:WorkflowViewStateService.ViewState>
-                                </ui:CommentOut>
-                                <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Subir cargue masivo'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="518,225" sap2010:WorkflowViewState.IdRef="NClick_7" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="da35983c-f447-4bcc-b699-44b91a5a7f25" Version="V4">
-                                  <uix:NClick.Target>
-                                    <uix:TargetAnchorable BrowserURL="sicerco.sic.gov.co/sicerco/carguemasivo/administrarCargueMasivo.xhtml" CVScreenId="01e82a07-8790-44a5-9734-577320dbb8b6" CvTextArea="317, 389, 133, 15" CvTextArgument="- Subir cargue masivo" CvType="Text" DesignTimeRectangle="310, 383, 249, 29" DesignTimeScaleFactor="1" ElementType="Text" FuzzySelectorArgument="&lt;webctrl aaname='Subir cargue masivo' aria-role='menuitem' tag='A' type='' class='ui-menuitem-link ui-corner-all' check:innerText='Subir cargue masivo' /&gt;" Guid="db95a72b-fd56-448a-b4ea-022ce5242fa3" InformativeScreenshot="1cd3cae030cfc27e2270e8c046567c97.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='SICERCO' /&gt;" SearchSteps="FuzzySelector, CV" Version="V5" Visibility="Interactive">
-                                      <uix:TargetAnchorable.Anchors>
-                                        <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
-                                          <uix:Target CVScreenId="01e82a07-8790-44a5-9734-577320dbb8b6" CvTextArea="312, 355, 158, 14" CvTextArgument="+ Registrar Cargue Masivo" CvType="Text" DesignTimeRectangle="305, 349, 186, 28" ElementType="Text" FuzzySelectorArgument="&lt;webctrl aria-role='menuitem' tag='A' type='' class='ui-menuitem-link ui-submenu-link ui-corner-all ui-state-hover' aaname='Registrar Cargue Masivo' check:innerText='Registrar Cargue Masivo' /&gt;" Guid="8dcef1f8-b6a1-4a79-8471-81a8e76fd2ad" SearchSteps="FuzzySelector, CV" />
-                                        </scg:List>
-                                      </uix:TargetAnchorable.Anchors>
-                                    </uix:TargetAnchorable>
-                                  </uix:NClick.Target>
-                                  <uix:NClick.VerifyOptions>
-                                    <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
-                                      <uix:VerifyExecutionOptions.Retry>
-                                        <InArgument x:TypeArguments="x:Boolean" />
-                                      </uix:VerifyExecutionOptions.Retry>
-                                      <uix:VerifyExecutionOptions.Timeout>
-                                        <InArgument x:TypeArguments="x:Double" />
-                                      </uix:VerifyExecutionOptions.Timeout>
-                                    </uix:VerifyExecutionOptions>
-                                  </uix:NClick.VerifyOptions>
-                                </uix:NClick>
-                                <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[clean_data]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="518,2290" sap2010:WorkflowViewState.IdRef="ForEachRow_2">
-                                  <ui:ForEachRow.Body>
-                                    <ActivityAction x:TypeArguments="sd:DataRow">
-                                      <ActivityAction.Argument>
-                                        <DelegateInArgument x:TypeArguments="sd:DataRow" Name="CurrentRow" />
-                                      </ActivityAction.Argument>
-                                      <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="484,2094" sap2010:WorkflowViewState.IdRef="Sequence_588">
-                                        <Sequence.Variables>
-                                          <Variable x:TypeArguments="x:Boolean" Name="validate_upload_folder" />
-                                        </Sequence.Variables>
-                                        <sap:WorkflowViewStateService.ViewState>
-                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                          </scg:Dictionary>
-                                        </sap:WorkflowViewStateService.ViewState>
-                                        <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Adjuntar archivo de car…'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="450,225" sap2010:WorkflowViewState.IdRef="NClick_8" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="da35983c-f447-4bcc-b699-44b91a5a7f25" Version="V4">
-                                          <uix:NClick.Target>
-                                            <uix:TargetAnchorable BrowserURL="sicerco.sic.gov.co/sicerco/carguemasivo/crearCargueMasivos.xhtml" CVScreenId="5ce31385-b0f1-4f3d-aefc-dd248ff610ae" CvElementArea="308, 648, 279, 28" CvType="Button" DesignTimeRectangle="312, 651, 273, 23" DesignTimeScaleFactor="1" ElementType="Text" FuzzySelectorArgument="&lt;webctrl id='formaPrincipal:panelArchivo' tag='TABLE' /&gt;&lt;webctrl id='formaPrincipal:archivo_label' type='' tag='SPAN' class='ui-button-text ui-c' aaname='Adjuntar archivo de cargue masivo (.zip)' check:innerText='Adjuntar archivo de cargue masivo (.zip)' /&gt;" Guid="25e0701c-6646-49cd-8245-157a48c28036" InformativeScreenshot="5dee17182d5f61ef79c4f3990ffca9ab.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='SICERCO' /&gt;" SearchSteps="FuzzySelector, CV" Version="V5" Visibility="Interactive">
-                                              <uix:TargetAnchorable.Anchors>
-                                                <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
-                                                  <uix:Target DesignTimeRectangle="301, 618, 1320, 91" FuzzySelectorArgument="&lt;webctrl id='formaPrincipal:panelArchivo' tag='TABLE' /&gt;&lt;webctrl type='' tag='TD' class='ui-panelgrid-cell' aaname='' check:innerText='Archivo + peso max.(80 MegaBytes)*&amp;#xA;Adjuntar archivo de cargue masivo (.zip)' /&gt;" Guid="734049f0-b3c6-4299-8f84-098ae01f3840" SearchSteps="FuzzySelector" />
-                                                </scg:List>
-                                              </uix:TargetAnchorable.Anchors>
-                                            </uix:TargetAnchorable>
-                                          </uix:NClick.Target>
-                                          <uix:NClick.VerifyOptions>
-                                            <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
-                                              <uix:VerifyExecutionOptions.Retry>
-                                                <InArgument x:TypeArguments="x:Boolean" />
-                                              </uix:VerifyExecutionOptions.Retry>
-                                              <uix:VerifyExecutionOptions.Timeout>
-                                                <InArgument x:TypeArguments="x:Double" />
-                                              </uix:VerifyExecutionOptions.Timeout>
-                                            </uix:VerifyExecutionOptions>
-                                          </uix:NClick.VerifyOptions>
-                                        </uix:NClick>
-                                        <uix:NSetText DisplayName="Set Text 'No&amp;mbre'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="450,194" sap2010:WorkflowViewState.IdRef="NSetText_2" ScopeIdentifier="da35983c-f447-4bcc-b699-44b91a5a7f25" Text="[CurrentRow(&quot;Rutas&quot;).ToString]" Version="V4">
-                                          <uix:NSetText.Target>
-                                            <uix:TargetAnchorable BrowserURL="sicerco.sic.gov.co/sicerco/carguemasivo/crearCargueMasivos.xhtml" CVScreenId="02901160-89ca-4aad-bdbd-93e5be9a5fb8" CvElementArea="187, 459, 551, 25" CvType="InputBox" DesignTimeRectangle="194, 465, 521, 15" DesignTimeScaleFactor="1" ElementType="InputBox" FullSelectorArgument="&lt;wnd ctrlid='1148' /&gt;&lt;wnd ctrlid='1148' /&gt;&lt;wnd ctrlid='1148' /&gt;" FuzzySelectorArgument="&lt;wnd ctrlid='1148' /&gt;&lt;wnd ctrlid='1148' /&gt;&lt;wnd ctrlid='1148' /&gt;" Guid="6247de9b-bd45-44a1-af25-ba971986f776" InformativeScreenshot="383e5b47642e71c942a0c990d8c37c14.png" IsResponsive="True" ScopeSelectorArgument="&lt;wnd app='msedge.exe' cls='#32770' title='Abrir' /&gt;" SearchSteps="Selector, FuzzySelector, CV" Version="V5" Visibility="Interactive">
-                                              <uix:TargetAnchorable.Anchors>
-                                                <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
-                                                  <uix:Target CVScreenId="02901160-89ca-4aad-bdbd-93e5be9a5fb8" CvTextArea="137, 465, 48, 12" CvTextArgument="Nombre:" CvType="Text" DesignTimeRectangle="138, 464, 47, 15" ElementType="Text" FullSelectorArgument="&lt;wnd ctrlid='1090' title='No&amp;amp;mbre:' /&gt;" FuzzySelectorArgument="&lt;wnd ctrlid='1090' title='No&amp;amp;mbre:' check:text='No&amp;amp;mbre:' /&gt;" Guid="9e394d29-1d67-4641-b787-e48426df42be" SearchSteps="Selector, FuzzySelector, CV" />
-                                                </scg:List>
-                                              </uix:TargetAnchorable.Anchors>
-                                            </uix:TargetAnchorable>
-                                          </uix:NSetText.Target>
-                                        </uix:NSetText>
-                                        <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'unchecked'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="450,225" sap2010:WorkflowViewState.IdRef="NClick_13" InteractionMode="HardwareEvents" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="da35983c-f447-4bcc-b699-44b91a5a7f25" Version="V4">
-                                          <uix:NClick.Target>
-                                            <uix:TargetAnchorable BrowserURL="sicerco.sic.gov.co/sicerco/carguemasivo/crearCargueMasivos.xhtml" CVScreenId="53fd1f35-4e86-4667-ba52-2ba158c03733" CvElementArea="747, 489, 88, 26" CvTextArea="768, 494, 29, 13" CvTextArgument="Abrir" CvType="Button" DesignTimeRectangle="747, 489, 88, 26" DesignTimeScaleFactor="1" ElementType="Button" FullSelectorArgument="&lt;wnd ctrlid='1' title='&amp;amp;Abrir' /&gt;" FuzzySelectorArgument="&lt;wnd ctrlid='1' title='&amp;amp;Abrir' check:text='unchecked' /&gt;" Guid="93bd5379-3981-440d-83a8-d1131f6f4706" InformativeScreenshot="331daf64333aaa16a6c2be9c025453d3.png" IsResponsive="True" ScopeSelectorArgument="&lt;wnd app='msedge.exe' cls='#32770' title='Abrir' /&gt;" SearchSteps="Selector, FuzzySelector, CV" Version="V5" Visibility="Interactive">
-                                              <uix:TargetAnchorable.Anchors>
-                                                <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
-                                                  <uix:Target CVScreenId="53fd1f35-4e86-4667-ba52-2ba158c03733" CvElementArea="847, 489, 87, 26" CvTextArea="867, 494, 48, 14" CvTextArgument="Cancelar" CvType="Button" DesignTimeRectangle="847, 489, 88, 26" ElementType="Button" FullSelectorArgument="&lt;wnd ctrlid='2' title='Cancelar' /&gt;" FuzzySelectorArgument="&lt;wnd ctrlid='2' title='Cancelar' check:text='Cancelar' /&gt;" Guid="001adbda-984b-4188-b798-bb12263f5422" SearchSteps="Selector, FuzzySelector, CV" />
-                                                </scg:List>
-                                              </uix:TargetAnchorable.Anchors>
-                                            </uix:TargetAnchorable>
-                                          </uix:NClick.Target>
-                                          <uix:NClick.VerifyOptions>
-                                            <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
-                                              <uix:VerifyExecutionOptions.Retry>
-                                                <InArgument x:TypeArguments="x:Boolean" />
-                                              </uix:VerifyExecutionOptions.Retry>
-                                              <uix:VerifyExecutionOptions.Timeout>
-                                                <InArgument x:TypeArguments="x:Double" />
-                                              </uix:VerifyExecutionOptions.Timeout>
-                                            </uix:VerifyExecutionOptions>
-                                          </uix:NClick.VerifyOptions>
-                                        </uix:NClick>
-                                        <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'certificados-30-1-2025-…'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="450,225" sap2010:WorkflowViewState.IdRef="NClick_9" InteractionMode="HardwareEvents" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="da35983c-f447-4bcc-b699-44b91a5a7f25" Version="V4">
-                                          <uix:NClick.Target>
-                                            <uix:TargetAnchorable BrowserURL="sicerco.sic.gov.co/sicerco/carguemasivo/crearCargueMasivos.xhtml" CVScreenId="d8ca230e-1c8d-418d-9a25-3a91ed974a17" CvTextArea="205, 182, 165, 12" CvTextArgument="certificados-30-1-2025-16-28-7" CvType="Text" DesignTimeRectangle="204, 179, 236, 19" DesignTimeScaleFactor="1" ElementType="Text" FullSelectorArgument="&lt;wnd aaname='Panel del explorador' cls='DirectUIHWND' /&gt;&lt;wnd ctrlid='1121' title='ShellView' /&gt;&lt;wnd aaname='Vista Elementos' cls='DirectUIHWND' /&gt;&lt;ctrl name='Vista Elementos' role='list' /&gt;&lt;ctrl automationid='1' /&gt;&lt;ctrl automationid='System.ItemNameDisplay' /&gt;" FuzzySelectorArgument="&lt;wnd aaname='Panel del explorador' cls='DirectUIHWND' /&gt;&lt;wnd ctrlid='1121' title='ShellView' /&gt;&lt;wnd aaname='Vista Elementos' cls='DirectUIHWND' /&gt;&lt;ctrl name='Vista Elementos' role='list' /&gt;&lt;ctrl automationid='1' /&gt;&lt;ctrl automationid='System.ItemNameDisplay' role='editable text' check:text='certificados-30-1-2025-16-28-7' /&gt;" Guid="17ddca1d-ac77-4634-bcd4-b5a765cddc7c" InformativeScreenshot="dc90db868a67efd22fd13f9de0fa0f84.png" ScopeSelectorArgument="&lt;wnd app='msedge.exe' cls='#32770' title='Abrir' /&gt;" SearchSteps="Selector, FuzzySelector, CV" Version="V5" Visibility="Interactive">
-                                              <uix:TargetAnchorable.Anchors>
-                                                <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
-                                                  <uix:Target CVScreenId="d8ca230e-1c8d-418d-9a25-3a91ed974a17" CvTextArea="205, 210, 130, 15" CvTextArgument="estructuraCargueMasivo" CvType="Text" DesignTimeRectangle="204, 207, 236, 19" ElementType="Text" FullSelectorArgument="&lt;wnd aaname='Panel del explorador' cls='DirectUIHWND' /&gt;&lt;wnd ctrlid='1121' title='ShellView' /&gt;&lt;wnd aaname='Vista Elementos' cls='DirectUIHWND' /&gt;&lt;ctrl name='Vista Elementos' role='list' /&gt;&lt;ctrl automationid='2' /&gt;&lt;ctrl automationid='System.ItemNameDisplay' /&gt;" FuzzySelectorArgument="&lt;wnd aaname='Panel del explorador' cls='DirectUIHWND' /&gt;&lt;wnd ctrlid='1121' title='ShellView' /&gt;&lt;wnd aaname='Vista Elementos' cls='DirectUIHWND' /&gt;&lt;ctrl name='Vista Elementos' role='list' /&gt;&lt;ctrl automationid='2' /&gt;&lt;ctrl automationid='System.ItemNameDisplay' role='editable text' check:text='estructuraCargueMasivo' /&gt;" Guid="6f256d7f-3f66-4365-b875-ed1452cb2317" SearchSteps="Selector, FuzzySelector, CV" />
-                                                </scg:List>
-                                              </uix:TargetAnchorable.Anchors>
-                                            </uix:TargetAnchorable>
-                                          </uix:NClick.Target>
-                                          <uix:NClick.VerifyOptions>
-                                            <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
-                                              <uix:VerifyExecutionOptions.Retry>
-                                                <InArgument x:TypeArguments="x:Boolean" />
-                                              </uix:VerifyExecutionOptions.Retry>
-                                              <uix:VerifyExecutionOptions.Timeout>
-                                                <InArgument x:TypeArguments="x:Double" />
-                                              </uix:VerifyExecutionOptions.Timeout>
-                                            </uix:VerifyExecutionOptions>
-                                          </uix:NClick.VerifyOptions>
-                                        </uix:NClick>
-                                        <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'unchecked'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="450,225" sap2010:WorkflowViewState.IdRef="NClick_10" InteractionMode="HardwareEvents" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="da35983c-f447-4bcc-b699-44b91a5a7f25" Version="V4">
-                                          <uix:NClick.Target>
-                                            <uix:TargetAnchorable BrowserURL="sicerco.sic.gov.co/sicerco/carguemasivo/crearCargueMasivos.xhtml" CVScreenId="f340a723-dde9-4209-90bb-9752bdd21410" CvElementArea="746, 488, 88, 27" CvTextArea="768, 495, 29, 12" CvTextArgument="Abrir" CvType="Button" DesignTimeRectangle="747, 489, 88, 26" DesignTimeScaleFactor="1" ElementType="Button" FullSelectorArgument="&lt;wnd ctrlid='1' title='&amp;amp;Abrir' /&gt;" FuzzySelectorArgument="&lt;wnd ctrlid='1' title='&amp;amp;Abrir' check:text='unchecked' /&gt;" Guid="0812377e-cb81-4845-b398-13e201e126f1" InformativeScreenshot="4d5caf1961dd70413606c2efdb62908b.png" ScopeSelectorArgument="&lt;wnd app='msedge.exe' cls='#32770' title='Abrir' /&gt;" SearchSteps="Selector, FuzzySelector, CV" Version="V5" Visibility="Interactive">
-                                              <uix:TargetAnchorable.Anchors>
-                                                <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
-                                                  <uix:Target CVScreenId="f340a723-dde9-4209-90bb-9752bdd21410" CvElementArea="847, 489, 88, 26" CvTextArea="867, 495, 48, 12" CvTextArgument="Cancelar" CvType="Button" DesignTimeRectangle="847, 489, 88, 26" ElementType="Button" FullSelectorArgument="&lt;wnd ctrlid='2' title='Cancelar' /&gt;" FuzzySelectorArgument="&lt;wnd ctrlid='2' title='Cancelar' check:text='Cancelar' /&gt;" Guid="3ccbf3f1-266e-46f2-8be2-22b0b191fc61" SearchSteps="Selector, FuzzySelector, CV" />
-                                                </scg:List>
-                                              </uix:TargetAnchorable.Anchors>
-                                            </uix:TargetAnchorable>
-                                          </uix:NClick.Target>
-                                          <uix:NClick.VerifyOptions>
-                                            <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
-                                              <uix:VerifyExecutionOptions.Retry>
-                                                <InArgument x:TypeArguments="x:Boolean" />
-                                              </uix:VerifyExecutionOptions.Retry>
-                                              <uix:VerifyExecutionOptions.Timeout>
-                                                <InArgument x:TypeArguments="x:Double" />
-                                              </uix:VerifyExecutionOptions.Timeout>
-                                            </uix:VerifyExecutionOptions>
-                                          </uix:NClick.VerifyOptions>
-                                        </uix:NClick>
-                                        <uix:NCheckElement DelayBefore="0" DisplayName="Check Element 'Información cargue masi…'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="450,189" sap2010:WorkflowViewState.IdRef="NCheckElement_3" Result="[validate_file_upload]" ScopeIdentifier="da35983c-f447-4bcc-b699-44b91a5a7f25" Timeout="120" Version="V4">
-                                          <uix:NCheckElement.Target>
-                                            <uix:TargetAnchorable BrowserURL="sicerco.sic.gov.co/sicerco/carguemasivo/crearCargueMasivos.xhtml" CVScreenId="c935958a-acc0-4ecf-b81b-c208d42e049f" CvTextArea="307, 652, 218, 17" CvTextArgument="certificados-13-3-2025-16-27-22.zip" CvType="Text" DesignTimeRectangle="305, 647, 393, 33" DesignTimeScaleFactor="1" FuzzySelectorArgument="&lt;webctrl id='formaPrincipal:j_idt54' tag='TABLE' /&gt;&lt;webctrl type='' tag='TD' class='ui-panelgrid-cell' aaname='' check:innerText='certificados-13-3-2025-16-27-22.zip' /&gt;" Guid="7c27a3a0-2795-4be2-a316-567f4cf84a15" InformativeScreenshot="ea1e22328c7b0b4b7744fafff5de32c7.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='SICERCO' /&gt;" SearchSteps="FuzzySelector, CV" Version="V5" Visibility="Interactive">
-                                              <uix:TargetAnchorable.Anchors>
-                                                <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
-                                                  <uix:Target CVScreenId="c935958a-acc0-4ecf-b81b-c208d42e049f" CvTextArea="303, 544, 171, 13" CvTextArgument="Informacion cargue masivo" CvType="Text" DesignTimeRectangle="305, 542, 169, 20" ElementType="Text" FuzzySelectorArgument="&lt;webctrl id='formaPrincipal:infoParametro' tag='TABLE' /&gt;&lt;webctrl id='formaPrincipal:j_idt42' type='' tag='LABEL' class='ui-outputlabel ui-widget' aaname='Información cargue masivo' check:innerText='Información cargue masivo' /&gt;" Guid="4f957c39-0185-409c-9560-5d92b506dc76" SearchSteps="FuzzySelector, CV" />
-                                                </scg:List>
-                                              </uix:TargetAnchorable.Anchors>
-                                            </uix:TargetAnchorable>
-                                          </uix:NCheckElement.Target>
-                                        </uix:NCheckElement>
-                                        <If Condition="[validate_file_upload]" sap:VirtualizedContainerService.HintSize="450,751" sap2010:WorkflowViewState.IdRef="If_18">
-                                          <If.Then>
-                                            <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="416,501" sap2010:WorkflowViewState.IdRef="Sequence_594">
-                                              <sap:WorkflowViewStateService.ViewState>
-                                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                                </scg:Dictionary>
-                                              </sap:WorkflowViewStateService.ViewState>
-                                              <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Guardar'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="382,225" sap2010:WorkflowViewState.IdRef="NClick_12" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="da35983c-f447-4bcc-b699-44b91a5a7f25" Version="V4">
-                                                <uix:NClick.Target>
-                                                  <uix:TargetAnchorable BrowserURL="sicerco.sic.gov.co/sicerco/carguemasivo/crearCargueMasivos.xhtml" CVScreenId="cd142ed4-0d7a-40c3-990c-fefa0beaaf5c" DesignTimeRectangle="863, 725, 88, 22" DesignTimeScaleFactor="1" ElementType="Text" FullSelectorArgument="&lt;webctrl id='formaPrincipal:botones' tag='TABLE' /&gt;&lt;webctrl aaname='Guardar' tableRow='1' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl id='formaPrincipal:botones' tag='TABLE' /&gt;&lt;webctrl aaname='Guardar' type='' tag='SPAN' class='ui-button-text ui-c' check:innerText='Guardar' /&gt;" Guid="85fa61b4-4b2b-4c34-a8a3-626b8c6aa771" InformativeScreenshot="654777c9ba37af980ede4a321ffe4c3e.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='msedge.exe' title='SICERCO' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V5" Visibility="Interactive">
-                                                    <uix:TargetAnchorable.Anchors>
-                                                      <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
-                                                        <uix:Target CVScreenId="cd142ed4-0d7a-40c3-990c-fefa0beaaf5c" CvElementArea="860, 722, 93, 27" CvTextArea="889, 729, 50, 13" CvTextArgument="Guardar" CvType="Button" DesignTimeRectangle="862, 724, 90, 24" ElementType="Button" FuzzySelectorArgument="&lt;webctrl id='formaPrincipal:botones' tag='TABLE' /&gt;&lt;webctrl id='formaPrincipal:btnGuardar' type='submit' tag='BUTTON' class='ui-button ui-widget ui-state-default ui-corner-all ui-button-text-icon-left' aaname='Guardar' check:innerText='Guardar' /&gt;" Guid="f5f1a5e2-2671-46fc-b0f7-21bc211621c7" SearchSteps="FuzzySelector, CV" />
-                                                      </scg:List>
-                                                    </uix:TargetAnchorable.Anchors>
-                                                  </uix:TargetAnchorable>
-                                                </uix:NClick.Target>
-                                                <uix:NClick.VerifyOptions>
-                                                  <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
-                                                    <uix:VerifyExecutionOptions.Retry>
-                                                      <InArgument x:TypeArguments="x:Boolean" />
-                                                    </uix:VerifyExecutionOptions.Retry>
-                                                    <uix:VerifyExecutionOptions.Timeout>
-                                                      <InArgument x:TypeArguments="x:Double" />
-                                                    </uix:VerifyExecutionOptions.Timeout>
-                                                  </uix:VerifyExecutionOptions>
-                                                </uix:NClick.VerifyOptions>
-                                              </uix:NClick>
-                                              <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Limpiar'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="382,216" sap2010:WorkflowViewState.IdRef="NClick_11" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="da35983c-f447-4bcc-b699-44b91a5a7f25" Version="V4">
-                                                <uix:NClick.Target>
-                                                  <uix:TargetAnchorable BrowserURL="sicerco.sic.gov.co/sicerco/carguemasivo/crearCargueMasivos.xhtml" CVScreenId="67102af1-0d0e-4ffa-8733-e6582108e10b" DesignTimeRectangle="928, 725, 83, 22" DesignTimeScaleFactor="1" ElementType="Text" FuzzySelectorArgument="&lt;webctrl id='formaPrincipal:botones' tag='TABLE' /&gt;&lt;webctrl aaname='Limpiar' type='' tag='SPAN' class='ui-button-text ui-c' check:innerText='Limpiar' /&gt;" Guid="2dc0da57-b4fc-4e72-a2e9-dd17d9a4db43" InformativeScreenshot="58f5d39b0aa483240226bca75a6e1631.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='msedge.exe' title='SICERCO' /&gt;" SearchSteps="FuzzySelector" Version="V5" Visibility="Interactive">
-                                                    <uix:TargetAnchorable.Anchors>
-                                                      <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
-                                                        <uix:Target CVScreenId="67102af1-0d0e-4ffa-8733-e6582108e10b" CvElementArea="925, 722, 88, 27" CvTextArea="938, 729, 61, 16" CvTextArgument="? Limpiar" CvType="Button" DesignTimeRectangle="927, 724, 85, 24" ElementType="Button" FuzzySelectorArgument="&lt;webctrl id='formaPrincipal:botones' tag='TABLE' /&gt;&lt;webctrl id='formaPrincipal:btnLimpiar' type='submit' tag='BUTTON' class='ui-button ui-widget ui-state-default ui-corner-all ui-button-text-icon-left' aaname='Limpiar' check:innerText='Limpiar' /&gt;" Guid="92cea66a-1632-4f9b-a3fb-73c86f4e0f39" SearchSteps="FuzzySelector, CV" />
-                                                      </scg:List>
-                                                    </uix:TargetAnchorable.Anchors>
-                                                  </uix:TargetAnchorable>
-                                                </uix:NClick.Target>
-                                                <uix:NClick.VerifyOptions>
-                                                  <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
-                                                    <uix:VerifyExecutionOptions.Retry>
-                                                      <InArgument x:TypeArguments="x:Boolean" />
-                                                    </uix:VerifyExecutionOptions.Retry>
-                                                    <uix:VerifyExecutionOptions.Timeout>
-                                                      <InArgument x:TypeArguments="x:Double" />
-                                                    </uix:VerifyExecutionOptions.Timeout>
-                                                  </uix:VerifyExecutionOptions>
-                                                </uix:NClick.VerifyOptions>
-                                              </uix:NClick>
-                                            </Sequence>
-                                          </If.Then>
-                                          <If.Else>
-                                            <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="416,89" sap2010:WorkflowViewState.IdRef="Sequence_595">
-                                              <sap:WorkflowViewStateService.ViewState>
-                                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                                </scg:Dictionary>
-                                              </sap:WorkflowViewStateService.ViewState>
-                                            </Sequence>
-                                          </If.Else>
-                                        </If>
-                                      </Sequence>
-                                    </ActivityAction>
-                                  </ui:ForEachRow.Body>
-                                </ui:ForEachRow>
-                                <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="518,57" sap2010:WorkflowViewState.IdRef="CommentOut_130">
-                                  <ui:CommentOut.Body>
-                                    <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="416,108" sap2010:WorkflowViewState.IdRef="Sequence_589">
-                                      <sap:WorkflowViewStateService.ViewState>
-                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                        </scg:Dictionary>
-                                      </sap:WorkflowViewStateService.ViewState>
-                                      <ui:InterruptibleDoWhile CurrentIndex="{x:Null}" Condition="[array_folder.Length&gt;2]" DisplayName="Do While" sap:VirtualizedContainerService.HintSize="382,48" sap2010:WorkflowViewState.IdRef="InterruptibleDoWhile_1">
-                                        <ui:InterruptibleDoWhile.Body>
-                                          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="552,785" sap2010:WorkflowViewState.IdRef="Sequence_233">
+                                      <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Ingresar'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="518,225" sap2010:WorkflowViewState.IdRef="NClick_5" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="da35983c-f447-4bcc-b699-44b91a5a7f25" Version="V4">
+                                        <uix:NClick.Target>
+                                          <uix:TargetAnchorable BrowserURL="sicerco.sic.gov.co/sicerco/index.xhtml" CVScreenId="d36a18d3-a323-4afe-9ca5-970714ef196c" CvElementArea="540, 666, 94, 28" CvType="Button" DesignTimeRectangle="543, 669, 88, 23" DesignTimeScaleFactor="1" ElementType="Text" FullSelectorArgument="&lt;webctrl id='loginPrincipal:infoLogin' tableRow='1' tag='TABLE' /&gt;&lt;webctrl aaname='Ingresar' tableRow='4' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl id='loginPrincipal:infoLogin' tag='TABLE' /&gt;&lt;webctrl aaname='Ingresar' type='' tag='SPAN' class='ui-button-text ui-c' check:innerText='Ingresar' /&gt;" Guid="98960dd8-c284-45b4-b009-6abe5c2bcefa" InformativeScreenshot="64c5327c1bb44caaccc5a2124066685b.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='SICERCO' /&gt;" SearchSteps="Selector, FuzzySelector, CV" Version="V5" Visibility="Interactive">
+                                            <uix:TargetAnchorable.Anchors>
+                                              <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                                <uix:Target CVScreenId="d36a18d3-a323-4afe-9ca5-970714ef196c" CvElementArea="540, 666, 94, 28" CvType="Button" DesignTimeRectangle="542, 668, 90, 25" ElementType="Button" FuzzySelectorArgument="&lt;webctrl id='loginPrincipal:infoLogin' tag='TABLE' /&gt;&lt;webctrl id='loginPrincipal:btnIngresar' type='submit' tag='BUTTON' class='ui-button ui-widget ui-state-default ui-corner-all ui-button-text-icon-left' aaname='Ingresar' check:innerText='Ingresar' /&gt;" Guid="ea88d0ee-eb85-483d-bec0-44737c4cf68e" SearchSteps="FuzzySelector, CV" />
+                                              </scg:List>
+                                            </uix:TargetAnchorable.Anchors>
+                                          </uix:TargetAnchorable>
+                                        </uix:NClick.Target>
+                                        <uix:NClick.VerifyOptions>
+                                          <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
+                                            <uix:VerifyExecutionOptions.Retry>
+                                              <InArgument x:TypeArguments="x:Boolean" />
+                                            </uix:VerifyExecutionOptions.Retry>
+                                            <uix:VerifyExecutionOptions.Timeout>
+                                              <InArgument x:TypeArguments="x:Double" />
+                                            </uix:VerifyExecutionOptions.Timeout>
+                                          </uix:VerifyExecutionOptions>
+                                        </uix:NClick.VerifyOptions>
+                                      </uix:NClick>
+                                      <uix:NHover DisplayName="Hover 'Registrar Cargue Masivo'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="518,225" sap2010:WorkflowViewState.IdRef="NHover_1" ScopeIdentifier="da35983c-f447-4bcc-b699-44b91a5a7f25" Version="V4">
+                                        <uix:NHover.Target>
+                                          <uix:TargetAnchorable BrowserURL="sicerco.sic.gov.co/sicerco/seguridad/principal.xhtml" CVScreenId="231caa85-97be-4f21-8485-18550bf3e4e5" CvTextArea="312, 355, 158, 14" CvTextArgument="+ Registrar Cargue Masivo" CvType="Text" DesignTimeRectangle="305, 349, 186, 28" DesignTimeScaleFactor="1" ElementType="Text" FuzzySelectorArgument="&lt;webctrl aria-role='menuitem' tag='A' type='' class='ui-menuitem-link ui-submenu-link ui-corner-all ui-state-hover' aaname='Registrar Cargue Masivo' check:innerText='Registrar Cargue Masivo' /&gt;" Guid="51a838a1-abc8-4ca7-b1ed-7d3d63361874" InformativeScreenshot="ee09132289702b325c6c4caef43213e9.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='SICERCO' /&gt;" SearchSteps="FuzzySelector, CV" Version="V5" Visibility="Interactive">
+                                            <uix:TargetAnchorable.Anchors>
+                                              <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                                <uix:Target DesignTimeRectangle="491, 349, 110, 28" ElementType="Text" FuzzySelectorArgument="&lt;webctrl aaname='Certificados' aria-role='menuitem' tag='A' type='' class='ui-menuitem-link ui-submenu-link ui-corner-all' check:innerText='Certificados' /&gt;" Guid="56f23b85-cc89-440d-8afe-6f907fa0f889" SearchSteps="FuzzySelector" />
+                                              </scg:List>
+                                            </uix:TargetAnchorable.Anchors>
+                                          </uix:TargetAnchorable>
+                                        </uix:NHover.Target>
+                                        <uix:NHover.VerifyOptions>
+                                          <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
+                                            <uix:VerifyExecutionOptions.Retry>
+                                              <InArgument x:TypeArguments="x:Boolean" />
+                                            </uix:VerifyExecutionOptions.Retry>
+                                            <uix:VerifyExecutionOptions.Timeout>
+                                              <InArgument x:TypeArguments="x:Double" />
+                                            </uix:VerifyExecutionOptions.Timeout>
+                                          </uix:VerifyExecutionOptions>
+                                        </uix:NHover.VerifyOptions>
+                                      </uix:NHover>
+                                      <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="518,387" sap2010:WorkflowViewState.IdRef="CommentOut_40">
+                                        <ui:CommentOut.Body>
+                                          <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="416,276" sap2010:WorkflowViewState.IdRef="Sequence_212">
                                             <sap:WorkflowViewStateService.ViewState>
                                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                               </scg:Dictionary>
                                             </sap:WorkflowViewStateService.ViewState>
-                                            <ui:ForEach x:TypeArguments="x:String" CurrentIndex="{x:Null}" DisplayName="For Each currentText" sap:VirtualizedContainerService.HintSize="518,725" sap2010:WorkflowViewState.IdRef="ForEach`1_4" Values="[array_folder]">
-                                              <ui:ForEach.Body>
-                                                <ActivityAction x:TypeArguments="x:String">
-                                                  <ActivityAction.Argument>
-                                                    <DelegateInArgument x:TypeArguments="x:String" Name="currentText" />
-                                                  </ActivityAction.Argument>
-                                                  <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="484,588" sap2010:WorkflowViewState.IdRef="Sequence_234">
+                                            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Registrar Cargue Masivo'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="382,216" sap2010:WorkflowViewState.IdRef="NClick_6" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="da35983c-f447-4bcc-b699-44b91a5a7f25" Version="V4">
+                                              <uix:NClick.Target>
+                                                <uix:TargetAnchorable BrowserURL="sicerco.sic.gov.co/sicerco/carguemasivo/administrarCargueMasivo.xhtml" CVScreenId="8620c854-708d-4444-ba81-4d3989a989b8" CvElementArea="469, 354, 17, 17" CvTextArea="312, 355, 158, 14" CvTextArgument="+ Registrar Cargue Masivo" CvType="ArrowButton" DesignTimeRectangle="305, 349, 186, 28" DesignTimeScaleFactor="1" ElementType="Text" FuzzySelectorArgument="&lt;webctrl aria-role='menuitem' tag='A' type='' class='ui-menuitem-link ui-submenu-link ui-corner-all' aaname='Registrar Cargue Masivo' check:innerText='Registrar Cargue Masivo' /&gt;" Guid="c162f8f4-9a97-4f07-9f14-5a5d3f5d1acb" InformativeScreenshot="6e6a468805dbeaa9c0f3113daa332103.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='SICERCO' /&gt;" SearchSteps="FuzzySelector, CV" Version="V5" Visibility="Interactive">
+                                                  <uix:TargetAnchorable.Anchors>
+                                                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                                      <uix:Target CVScreenId="8620c854-708d-4444-ba81-4d3989a989b8" CvElementArea="580, 354, 16, 17" CvTextArea="498, 355, 83, 14" CvTextArgument="+ Certificados" CvType="ArrowButton" DesignTimeRectangle="491, 349, 110, 28" ElementType="Text" FuzzySelectorArgument="&lt;webctrl aaname='Certificados' aria-role='menuitem' tag='A' type='' class='ui-menuitem-link ui-submenu-link ui-corner-all' check:innerText='Certificados' /&gt;" Guid="955ba775-24ff-4301-8e17-02d192fa444b" SearchSteps="FuzzySelector, CV" />
+                                                    </scg:List>
+                                                  </uix:TargetAnchorable.Anchors>
+                                                </uix:TargetAnchorable>
+                                              </uix:NClick.Target>
+                                              <uix:NClick.VerifyOptions>
+                                                <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
+                                                  <uix:VerifyExecutionOptions.Retry>
+                                                    <InArgument x:TypeArguments="x:Boolean" />
+                                                  </uix:VerifyExecutionOptions.Retry>
+                                                  <uix:VerifyExecutionOptions.Timeout>
+                                                    <InArgument x:TypeArguments="x:Double" />
+                                                  </uix:VerifyExecutionOptions.Timeout>
+                                                </uix:VerifyExecutionOptions>
+                                              </uix:NClick.VerifyOptions>
+                                            </uix:NClick>
+                                          </Sequence>
+                                        </ui:CommentOut.Body>
+                                        <sap:WorkflowViewStateService.ViewState>
+                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                          </scg:Dictionary>
+                                        </sap:WorkflowViewStateService.ViewState>
+                                      </ui:CommentOut>
+                                      <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Subir cargue masivo'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="518,225" sap2010:WorkflowViewState.IdRef="NClick_7" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="da35983c-f447-4bcc-b699-44b91a5a7f25" Version="V4">
+                                        <uix:NClick.Target>
+                                          <uix:TargetAnchorable BrowserURL="sicerco.sic.gov.co/sicerco/carguemasivo/administrarCargueMasivo.xhtml" CVScreenId="01e82a07-8790-44a5-9734-577320dbb8b6" CvTextArea="317, 389, 133, 15" CvTextArgument="- Subir cargue masivo" CvType="Text" DesignTimeRectangle="310, 383, 249, 29" DesignTimeScaleFactor="1" ElementType="Text" FuzzySelectorArgument="&lt;webctrl aaname='Subir cargue masivo' aria-role='menuitem' tag='A' type='' class='ui-menuitem-link ui-corner-all' check:innerText='Subir cargue masivo' /&gt;" Guid="db95a72b-fd56-448a-b4ea-022ce5242fa3" InformativeScreenshot="1cd3cae030cfc27e2270e8c046567c97.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='SICERCO' /&gt;" SearchSteps="FuzzySelector, CV" Version="V5" Visibility="Interactive">
+                                            <uix:TargetAnchorable.Anchors>
+                                              <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                                <uix:Target CVScreenId="01e82a07-8790-44a5-9734-577320dbb8b6" CvTextArea="312, 355, 158, 14" CvTextArgument="+ Registrar Cargue Masivo" CvType="Text" DesignTimeRectangle="305, 349, 186, 28" ElementType="Text" FuzzySelectorArgument="&lt;webctrl aria-role='menuitem' tag='A' type='' class='ui-menuitem-link ui-submenu-link ui-corner-all ui-state-hover' aaname='Registrar Cargue Masivo' check:innerText='Registrar Cargue Masivo' /&gt;" Guid="8dcef1f8-b6a1-4a79-8471-81a8e76fd2ad" SearchSteps="FuzzySelector, CV" />
+                                              </scg:List>
+                                            </uix:TargetAnchorable.Anchors>
+                                          </uix:TargetAnchorable>
+                                        </uix:NClick.Target>
+                                        <uix:NClick.VerifyOptions>
+                                          <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
+                                            <uix:VerifyExecutionOptions.Retry>
+                                              <InArgument x:TypeArguments="x:Boolean" />
+                                            </uix:VerifyExecutionOptions.Retry>
+                                            <uix:VerifyExecutionOptions.Timeout>
+                                              <InArgument x:TypeArguments="x:Double" />
+                                            </uix:VerifyExecutionOptions.Timeout>
+                                          </uix:VerifyExecutionOptions>
+                                        </uix:NClick.VerifyOptions>
+                                      </uix:NClick>
+                                      <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[clean_data]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="518,2290" sap2010:WorkflowViewState.IdRef="ForEachRow_2">
+                                        <ui:ForEachRow.Body>
+                                          <ActivityAction x:TypeArguments="sd:DataRow">
+                                            <ActivityAction.Argument>
+                                              <DelegateInArgument x:TypeArguments="sd:DataRow" Name="CurrentRow" />
+                                            </ActivityAction.Argument>
+                                            <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="484,2094" sap2010:WorkflowViewState.IdRef="Sequence_588">
+                                              <Sequence.Variables>
+                                                <Variable x:TypeArguments="x:Boolean" Name="validate_upload_folder" />
+                                              </Sequence.Variables>
+                                              <sap:WorkflowViewStateService.ViewState>
+                                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                </scg:Dictionary>
+                                              </sap:WorkflowViewStateService.ViewState>
+                                              <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Adjuntar archivo de car…'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="450,225" sap2010:WorkflowViewState.IdRef="NClick_8" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="da35983c-f447-4bcc-b699-44b91a5a7f25" Version="V4">
+                                                <uix:NClick.Target>
+                                                  <uix:TargetAnchorable BrowserURL="sicerco.sic.gov.co/sicerco/carguemasivo/crearCargueMasivos.xhtml" CVScreenId="5ce31385-b0f1-4f3d-aefc-dd248ff610ae" CvElementArea="308, 648, 279, 28" CvType="Button" DesignTimeRectangle="312, 651, 273, 23" DesignTimeScaleFactor="1" ElementType="Text" FuzzySelectorArgument="&lt;webctrl id='formaPrincipal:panelArchivo' tag='TABLE' /&gt;&lt;webctrl id='formaPrincipal:archivo_label' type='' tag='SPAN' class='ui-button-text ui-c' aaname='Adjuntar archivo de cargue masivo (.zip)' check:innerText='Adjuntar archivo de cargue masivo (.zip)' /&gt;" Guid="25e0701c-6646-49cd-8245-157a48c28036" InformativeScreenshot="5dee17182d5f61ef79c4f3990ffca9ab.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='SICERCO' /&gt;" SearchSteps="FuzzySelector, CV" Version="V5" Visibility="Interactive">
+                                                    <uix:TargetAnchorable.Anchors>
+                                                      <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                                        <uix:Target DesignTimeRectangle="301, 618, 1320, 91" FuzzySelectorArgument="&lt;webctrl id='formaPrincipal:panelArchivo' tag='TABLE' /&gt;&lt;webctrl type='' tag='TD' class='ui-panelgrid-cell' aaname='' check:innerText='Archivo + peso max.(80 MegaBytes)*&amp;#xA;Adjuntar archivo de cargue masivo (.zip)' /&gt;" Guid="734049f0-b3c6-4299-8f84-098ae01f3840" SearchSteps="FuzzySelector" />
+                                                      </scg:List>
+                                                    </uix:TargetAnchorable.Anchors>
+                                                  </uix:TargetAnchorable>
+                                                </uix:NClick.Target>
+                                                <uix:NClick.VerifyOptions>
+                                                  <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
+                                                    <uix:VerifyExecutionOptions.Retry>
+                                                      <InArgument x:TypeArguments="x:Boolean" />
+                                                    </uix:VerifyExecutionOptions.Retry>
+                                                    <uix:VerifyExecutionOptions.Timeout>
+                                                      <InArgument x:TypeArguments="x:Double" />
+                                                    </uix:VerifyExecutionOptions.Timeout>
+                                                  </uix:VerifyExecutionOptions>
+                                                </uix:NClick.VerifyOptions>
+                                              </uix:NClick>
+                                              <uix:NSetText DisplayName="Set Text 'No&amp;mbre'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="450,194" sap2010:WorkflowViewState.IdRef="NSetText_2" ScopeIdentifier="da35983c-f447-4bcc-b699-44b91a5a7f25" Text="[CurrentRow(&quot;Rutas&quot;).ToString]" Version="V4">
+                                                <uix:NSetText.Target>
+                                                  <uix:TargetAnchorable BrowserURL="sicerco.sic.gov.co/sicerco/carguemasivo/crearCargueMasivos.xhtml" CVScreenId="02901160-89ca-4aad-bdbd-93e5be9a5fb8" CvElementArea="187, 459, 551, 25" CvType="InputBox" DesignTimeRectangle="194, 465, 521, 15" DesignTimeScaleFactor="1" ElementType="InputBox" FullSelectorArgument="&lt;wnd ctrlid='1148' /&gt;&lt;wnd ctrlid='1148' /&gt;&lt;wnd ctrlid='1148' /&gt;" FuzzySelectorArgument="&lt;wnd ctrlid='1148' /&gt;&lt;wnd ctrlid='1148' /&gt;&lt;wnd ctrlid='1148' /&gt;" Guid="6247de9b-bd45-44a1-af25-ba971986f776" InformativeScreenshot="383e5b47642e71c942a0c990d8c37c14.png" IsResponsive="True" ScopeSelectorArgument="&lt;wnd app='msedge.exe' cls='#32770' title='Abrir' /&gt;" SearchSteps="Selector, FuzzySelector, CV" Version="V5" Visibility="Interactive">
+                                                    <uix:TargetAnchorable.Anchors>
+                                                      <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                                        <uix:Target CVScreenId="02901160-89ca-4aad-bdbd-93e5be9a5fb8" CvTextArea="137, 465, 48, 12" CvTextArgument="Nombre:" CvType="Text" DesignTimeRectangle="138, 464, 47, 15" ElementType="Text" FullSelectorArgument="&lt;wnd ctrlid='1090' title='No&amp;amp;mbre:' /&gt;" FuzzySelectorArgument="&lt;wnd ctrlid='1090' title='No&amp;amp;mbre:' check:text='No&amp;amp;mbre:' /&gt;" Guid="9e394d29-1d67-4641-b787-e48426df42be" SearchSteps="Selector, FuzzySelector, CV" />
+                                                      </scg:List>
+                                                    </uix:TargetAnchorable.Anchors>
+                                                  </uix:TargetAnchorable>
+                                                </uix:NSetText.Target>
+                                              </uix:NSetText>
+                                              <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'unchecked'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="450,225" sap2010:WorkflowViewState.IdRef="NClick_13" InteractionMode="HardwareEvents" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="da35983c-f447-4bcc-b699-44b91a5a7f25" Version="V4">
+                                                <uix:NClick.Target>
+                                                  <uix:TargetAnchorable BrowserURL="sicerco.sic.gov.co/sicerco/carguemasivo/crearCargueMasivos.xhtml" CVScreenId="53fd1f35-4e86-4667-ba52-2ba158c03733" CvElementArea="747, 489, 88, 26" CvTextArea="768, 494, 29, 13" CvTextArgument="Abrir" CvType="Button" DesignTimeRectangle="747, 489, 88, 26" DesignTimeScaleFactor="1" ElementType="Button" FullSelectorArgument="&lt;wnd ctrlid='1' title='&amp;amp;Abrir' /&gt;" FuzzySelectorArgument="&lt;wnd ctrlid='1' title='&amp;amp;Abrir' check:text='unchecked' /&gt;" Guid="93bd5379-3981-440d-83a8-d1131f6f4706" InformativeScreenshot="331daf64333aaa16a6c2be9c025453d3.png" IsResponsive="True" ScopeSelectorArgument="&lt;wnd app='msedge.exe' cls='#32770' title='Abrir' /&gt;" SearchSteps="Selector, FuzzySelector, CV" Version="V5" Visibility="Interactive">
+                                                    <uix:TargetAnchorable.Anchors>
+                                                      <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                                        <uix:Target CVScreenId="53fd1f35-4e86-4667-ba52-2ba158c03733" CvElementArea="847, 489, 87, 26" CvTextArea="867, 494, 48, 14" CvTextArgument="Cancelar" CvType="Button" DesignTimeRectangle="847, 489, 88, 26" ElementType="Button" FullSelectorArgument="&lt;wnd ctrlid='2' title='Cancelar' /&gt;" FuzzySelectorArgument="&lt;wnd ctrlid='2' title='Cancelar' check:text='Cancelar' /&gt;" Guid="001adbda-984b-4188-b798-bb12263f5422" SearchSteps="Selector, FuzzySelector, CV" />
+                                                      </scg:List>
+                                                    </uix:TargetAnchorable.Anchors>
+                                                  </uix:TargetAnchorable>
+                                                </uix:NClick.Target>
+                                                <uix:NClick.VerifyOptions>
+                                                  <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
+                                                    <uix:VerifyExecutionOptions.Retry>
+                                                      <InArgument x:TypeArguments="x:Boolean" />
+                                                    </uix:VerifyExecutionOptions.Retry>
+                                                    <uix:VerifyExecutionOptions.Timeout>
+                                                      <InArgument x:TypeArguments="x:Double" />
+                                                    </uix:VerifyExecutionOptions.Timeout>
+                                                  </uix:VerifyExecutionOptions>
+                                                </uix:NClick.VerifyOptions>
+                                              </uix:NClick>
+                                              <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'certificados-30-1-2025-…'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="450,225" sap2010:WorkflowViewState.IdRef="NClick_9" InteractionMode="HardwareEvents" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="da35983c-f447-4bcc-b699-44b91a5a7f25" Version="V4">
+                                                <uix:NClick.Target>
+                                                  <uix:TargetAnchorable BrowserURL="sicerco.sic.gov.co/sicerco/carguemasivo/crearCargueMasivos.xhtml" CVScreenId="d8ca230e-1c8d-418d-9a25-3a91ed974a17" CvTextArea="205, 182, 165, 12" CvTextArgument="certificados-30-1-2025-16-28-7" CvType="Text" DesignTimeRectangle="204, 179, 236, 19" DesignTimeScaleFactor="1" ElementType="Text" FullSelectorArgument="&lt;wnd aaname='Panel del explorador' cls='DirectUIHWND' /&gt;&lt;wnd ctrlid='1121' title='ShellView' /&gt;&lt;wnd aaname='Vista Elementos' cls='DirectUIHWND' /&gt;&lt;ctrl name='Vista Elementos' role='list' /&gt;&lt;ctrl automationid='1' /&gt;&lt;ctrl automationid='System.ItemNameDisplay' /&gt;" FuzzySelectorArgument="&lt;wnd aaname='Panel del explorador' cls='DirectUIHWND' /&gt;&lt;wnd ctrlid='1121' title='ShellView' /&gt;&lt;wnd aaname='Vista Elementos' cls='DirectUIHWND' /&gt;&lt;ctrl name='Vista Elementos' role='list' /&gt;&lt;ctrl automationid='1' /&gt;&lt;ctrl automationid='System.ItemNameDisplay' role='editable text' check:text='certificados-30-1-2025-16-28-7' /&gt;" Guid="17ddca1d-ac77-4634-bcd4-b5a765cddc7c" InformativeScreenshot="dc90db868a67efd22fd13f9de0fa0f84.png" ScopeSelectorArgument="&lt;wnd app='msedge.exe' cls='#32770' title='Abrir' /&gt;" SearchSteps="Selector, FuzzySelector, CV" Version="V5" Visibility="Interactive">
+                                                    <uix:TargetAnchorable.Anchors>
+                                                      <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                                        <uix:Target CVScreenId="d8ca230e-1c8d-418d-9a25-3a91ed974a17" CvTextArea="205, 210, 130, 15" CvTextArgument="estructuraCargueMasivo" CvType="Text" DesignTimeRectangle="204, 207, 236, 19" ElementType="Text" FullSelectorArgument="&lt;wnd aaname='Panel del explorador' cls='DirectUIHWND' /&gt;&lt;wnd ctrlid='1121' title='ShellView' /&gt;&lt;wnd aaname='Vista Elementos' cls='DirectUIHWND' /&gt;&lt;ctrl name='Vista Elementos' role='list' /&gt;&lt;ctrl automationid='2' /&gt;&lt;ctrl automationid='System.ItemNameDisplay' /&gt;" FuzzySelectorArgument="&lt;wnd aaname='Panel del explorador' cls='DirectUIHWND' /&gt;&lt;wnd ctrlid='1121' title='ShellView' /&gt;&lt;wnd aaname='Vista Elementos' cls='DirectUIHWND' /&gt;&lt;ctrl name='Vista Elementos' role='list' /&gt;&lt;ctrl automationid='2' /&gt;&lt;ctrl automationid='System.ItemNameDisplay' role='editable text' check:text='estructuraCargueMasivo' /&gt;" Guid="6f256d7f-3f66-4365-b875-ed1452cb2317" SearchSteps="Selector, FuzzySelector, CV" />
+                                                      </scg:List>
+                                                    </uix:TargetAnchorable.Anchors>
+                                                  </uix:TargetAnchorable>
+                                                </uix:NClick.Target>
+                                                <uix:NClick.VerifyOptions>
+                                                  <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
+                                                    <uix:VerifyExecutionOptions.Retry>
+                                                      <InArgument x:TypeArguments="x:Boolean" />
+                                                    </uix:VerifyExecutionOptions.Retry>
+                                                    <uix:VerifyExecutionOptions.Timeout>
+                                                      <InArgument x:TypeArguments="x:Double" />
+                                                    </uix:VerifyExecutionOptions.Timeout>
+                                                  </uix:VerifyExecutionOptions>
+                                                </uix:NClick.VerifyOptions>
+                                              </uix:NClick>
+                                              <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'unchecked'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="450,225" sap2010:WorkflowViewState.IdRef="NClick_10" InteractionMode="HardwareEvents" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="da35983c-f447-4bcc-b699-44b91a5a7f25" Version="V4">
+                                                <uix:NClick.Target>
+                                                  <uix:TargetAnchorable BrowserURL="sicerco.sic.gov.co/sicerco/carguemasivo/crearCargueMasivos.xhtml" CVScreenId="f340a723-dde9-4209-90bb-9752bdd21410" CvElementArea="746, 488, 88, 27" CvTextArea="768, 495, 29, 12" CvTextArgument="Abrir" CvType="Button" DesignTimeRectangle="747, 489, 88, 26" DesignTimeScaleFactor="1" ElementType="Button" FullSelectorArgument="&lt;wnd ctrlid='1' title='&amp;amp;Abrir' /&gt;" FuzzySelectorArgument="&lt;wnd ctrlid='1' title='&amp;amp;Abrir' check:text='unchecked' /&gt;" Guid="0812377e-cb81-4845-b398-13e201e126f1" InformativeScreenshot="4d5caf1961dd70413606c2efdb62908b.png" ScopeSelectorArgument="&lt;wnd app='msedge.exe' cls='#32770' title='Abrir' /&gt;" SearchSteps="Selector, FuzzySelector, CV" Version="V5" Visibility="Interactive">
+                                                    <uix:TargetAnchorable.Anchors>
+                                                      <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                                        <uix:Target CVScreenId="f340a723-dde9-4209-90bb-9752bdd21410" CvElementArea="847, 489, 88, 26" CvTextArea="867, 495, 48, 12" CvTextArgument="Cancelar" CvType="Button" DesignTimeRectangle="847, 489, 88, 26" ElementType="Button" FullSelectorArgument="&lt;wnd ctrlid='2' title='Cancelar' /&gt;" FuzzySelectorArgument="&lt;wnd ctrlid='2' title='Cancelar' check:text='Cancelar' /&gt;" Guid="3ccbf3f1-266e-46f2-8be2-22b0b191fc61" SearchSteps="Selector, FuzzySelector, CV" />
+                                                      </scg:List>
+                                                    </uix:TargetAnchorable.Anchors>
+                                                  </uix:TargetAnchorable>
+                                                </uix:NClick.Target>
+                                                <uix:NClick.VerifyOptions>
+                                                  <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
+                                                    <uix:VerifyExecutionOptions.Retry>
+                                                      <InArgument x:TypeArguments="x:Boolean" />
+                                                    </uix:VerifyExecutionOptions.Retry>
+                                                    <uix:VerifyExecutionOptions.Timeout>
+                                                      <InArgument x:TypeArguments="x:Double" />
+                                                    </uix:VerifyExecutionOptions.Timeout>
+                                                  </uix:VerifyExecutionOptions>
+                                                </uix:NClick.VerifyOptions>
+                                              </uix:NClick>
+                                              <uix:NCheckElement DelayBefore="0" DisplayName="Check Element 'Información cargue masi…'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="450,189" sap2010:WorkflowViewState.IdRef="NCheckElement_3" Result="[validate_file_upload]" ScopeIdentifier="da35983c-f447-4bcc-b699-44b91a5a7f25" Timeout="120" Version="V4">
+                                                <uix:NCheckElement.Target>
+                                                  <uix:TargetAnchorable BrowserURL="sicerco.sic.gov.co/sicerco/carguemasivo/crearCargueMasivos.xhtml" CVScreenId="c935958a-acc0-4ecf-b81b-c208d42e049f" CvTextArea="307, 652, 218, 17" CvTextArgument="certificados-13-3-2025-16-27-22.zip" CvType="Text" DesignTimeRectangle="305, 647, 393, 33" DesignTimeScaleFactor="1" FuzzySelectorArgument="&lt;webctrl id='formaPrincipal:j_idt54' tag='TABLE' /&gt;&lt;webctrl type='' tag='TD' class='ui-panelgrid-cell' aaname='' check:innerText='certificados-13-3-2025-16-27-22.zip' /&gt;" Guid="7c27a3a0-2795-4be2-a316-567f4cf84a15" InformativeScreenshot="ea1e22328c7b0b4b7744fafff5de32c7.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='SICERCO' /&gt;" SearchSteps="FuzzySelector, CV" Version="V5" Visibility="Interactive">
+                                                    <uix:TargetAnchorable.Anchors>
+                                                      <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                                        <uix:Target CVScreenId="c935958a-acc0-4ecf-b81b-c208d42e049f" CvTextArea="303, 544, 171, 13" CvTextArgument="Informacion cargue masivo" CvType="Text" DesignTimeRectangle="305, 542, 169, 20" ElementType="Text" FuzzySelectorArgument="&lt;webctrl id='formaPrincipal:infoParametro' tag='TABLE' /&gt;&lt;webctrl id='formaPrincipal:j_idt42' type='' tag='LABEL' class='ui-outputlabel ui-widget' aaname='Información cargue masivo' check:innerText='Información cargue masivo' /&gt;" Guid="4f957c39-0185-409c-9560-5d92b506dc76" SearchSteps="FuzzySelector, CV" />
+                                                      </scg:List>
+                                                    </uix:TargetAnchorable.Anchors>
+                                                  </uix:TargetAnchorable>
+                                                </uix:NCheckElement.Target>
+                                              </uix:NCheckElement>
+                                              <If Condition="[validate_file_upload]" sap:VirtualizedContainerService.HintSize="450,751" sap2010:WorkflowViewState.IdRef="If_18">
+                                                <If.Then>
+                                                  <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="416,501" sap2010:WorkflowViewState.IdRef="Sequence_594">
                                                     <sap:WorkflowViewStateService.ViewState>
                                                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                                       </scg:Dictionary>
                                                     </sap:WorkflowViewStateService.ViewState>
-                                                    <If Condition="[array_folder.Length&gt;2]" sap:VirtualizedContainerService.HintSize="450,348" sap2010:WorkflowViewState.IdRef="If_9">
-                                                      <If.Then>
-                                                        <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="416,89" sap2010:WorkflowViewState.IdRef="Sequence_235">
-                                                          <sap:WorkflowViewStateService.ViewState>
-                                                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                                            </scg:Dictionary>
-                                                          </sap:WorkflowViewStateService.ViewState>
-                                                        </Sequence>
-                                                      </If.Then>
-                                                      <If.Else>
-                                                        <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="416,89" sap2010:WorkflowViewState.IdRef="Sequence_236">
-                                                          <sap:WorkflowViewStateService.ViewState>
-                                                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                                            </scg:Dictionary>
-                                                          </sap:WorkflowViewStateService.ViewState>
-                                                        </Sequence>
-                                                      </If.Else>
-                                                    </If>
-                                                    <uix:NCheckElement DelayBefore="0" DisplayName="Check Element 'Eliminar'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="450,180" sap2010:WorkflowViewState.IdRef="NCheckElement_2" Result="[validate_file_upload]" ScopeIdentifier="da35983c-f447-4bcc-b699-44b91a5a7f25" Version="V4">
-                                                      <uix:NCheckElement.Target>
-                                                        <uix:TargetAnchorable BrowserURL="sicerco.sic.gov.co/sicerco/carguemasivo/crearCargueMasivos.xhtml" CVScreenId="3d91589a-993f-4cc5-bb86-b460bd24122d" CvTextArea="307, 653, 209, 15" CvTextArgument="certificados-30-1-2025-16-28-7.zip" CvType="Text" DesignTimeRectangle="305, 647, 393, 33" DesignTimeScaleFactor="1" FuzzySelectorArgument="&lt;webctrl id='formaPrincipal:j_idt54' tag='TABLE' /&gt;&lt;webctrl type='' tag='TD' class='ui-panelgrid-cell' aaname='' check:innerText='certificados-30-1-2025-16-28-7.zip' /&gt;" Guid="8fa0c824-5194-45cb-af43-28565d6ac2c8" InformativeScreenshot="7892bcb60e6ed91e6624988b543f5db0.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='SICERCO' /&gt;" SearchSteps="FuzzySelector, CV" Version="V5" Visibility="Interactive">
+                                                    <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Guardar'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="382,225" sap2010:WorkflowViewState.IdRef="NClick_12" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="da35983c-f447-4bcc-b699-44b91a5a7f25" Version="V4">
+                                                      <uix:NClick.Target>
+                                                        <uix:TargetAnchorable BrowserURL="sicerco.sic.gov.co/sicerco/carguemasivo/crearCargueMasivos.xhtml" CVScreenId="cd142ed4-0d7a-40c3-990c-fefa0beaaf5c" DesignTimeRectangle="863, 725, 88, 22" DesignTimeScaleFactor="1" ElementType="Text" FullSelectorArgument="&lt;webctrl id='formaPrincipal:botones' tag='TABLE' /&gt;&lt;webctrl aaname='Guardar' tableRow='1' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl id='formaPrincipal:botones' tag='TABLE' /&gt;&lt;webctrl aaname='Guardar' type='' tag='SPAN' class='ui-button-text ui-c' check:innerText='Guardar' /&gt;" Guid="85fa61b4-4b2b-4c34-a8a3-626b8c6aa771" InformativeScreenshot="654777c9ba37af980ede4a321ffe4c3e.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='msedge.exe' title='SICERCO' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V5" Visibility="Interactive">
                                                           <uix:TargetAnchorable.Anchors>
                                                             <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
-                                                              <uix:Target CVScreenId="3d91589a-993f-4cc5-bb86-b460bd24122d" CvTextArea="730, 656, 48, 13" CvTextArgument="Eliminar" CvType="Text" DesignTimeRectangle="698, 647, 919, 33" FuzzySelectorArgument="&lt;webctrl id='formaPrincipal:j_idt54' tag='TABLE' /&gt;&lt;webctrl type='' class='ui-panelgrid-cell' tag='TD' aaname='' check:innerText='Eliminar' /&gt;" Guid="3578d537-acff-4c14-8838-749859d77a67" SearchSteps="FuzzySelector, CV" />
+                                                              <uix:Target CVScreenId="cd142ed4-0d7a-40c3-990c-fefa0beaaf5c" CvElementArea="860, 722, 93, 27" CvTextArea="889, 729, 50, 13" CvTextArgument="Guardar" CvType="Button" DesignTimeRectangle="862, 724, 90, 24" ElementType="Button" FuzzySelectorArgument="&lt;webctrl id='formaPrincipal:botones' tag='TABLE' /&gt;&lt;webctrl id='formaPrincipal:btnGuardar' type='submit' tag='BUTTON' class='ui-button ui-widget ui-state-default ui-corner-all ui-button-text-icon-left' aaname='Guardar' check:innerText='Guardar' /&gt;" Guid="f5f1a5e2-2671-46fc-b0f7-21bc211621c7" SearchSteps="FuzzySelector, CV" />
                                                             </scg:List>
                                                           </uix:TargetAnchorable.Anchors>
                                                         </uix:TargetAnchorable>
-                                                      </uix:NCheckElement.Target>
-                                                    </uix:NCheckElement>
+                                                      </uix:NClick.Target>
+                                                      <uix:NClick.VerifyOptions>
+                                                        <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
+                                                          <uix:VerifyExecutionOptions.Retry>
+                                                            <InArgument x:TypeArguments="x:Boolean" />
+                                                          </uix:VerifyExecutionOptions.Retry>
+                                                          <uix:VerifyExecutionOptions.Timeout>
+                                                            <InArgument x:TypeArguments="x:Double" />
+                                                          </uix:VerifyExecutionOptions.Timeout>
+                                                        </uix:VerifyExecutionOptions>
+                                                      </uix:NClick.VerifyOptions>
+                                                    </uix:NClick>
+                                                    <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Limpiar'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="382,216" sap2010:WorkflowViewState.IdRef="NClick_11" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="da35983c-f447-4bcc-b699-44b91a5a7f25" Version="V4">
+                                                      <uix:NClick.Target>
+                                                        <uix:TargetAnchorable BrowserURL="sicerco.sic.gov.co/sicerco/carguemasivo/crearCargueMasivos.xhtml" CVScreenId="67102af1-0d0e-4ffa-8733-e6582108e10b" DesignTimeRectangle="928, 725, 83, 22" DesignTimeScaleFactor="1" ElementType="Text" FuzzySelectorArgument="&lt;webctrl id='formaPrincipal:botones' tag='TABLE' /&gt;&lt;webctrl aaname='Limpiar' type='' tag='SPAN' class='ui-button-text ui-c' check:innerText='Limpiar' /&gt;" Guid="2dc0da57-b4fc-4e72-a2e9-dd17d9a4db43" InformativeScreenshot="58f5d39b0aa483240226bca75a6e1631.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='msedge.exe' title='SICERCO' /&gt;" SearchSteps="FuzzySelector" Version="V5" Visibility="Interactive">
+                                                          <uix:TargetAnchorable.Anchors>
+                                                            <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                                              <uix:Target CVScreenId="67102af1-0d0e-4ffa-8733-e6582108e10b" CvElementArea="925, 722, 88, 27" CvTextArea="938, 729, 61, 16" CvTextArgument="? Limpiar" CvType="Button" DesignTimeRectangle="927, 724, 85, 24" ElementType="Button" FuzzySelectorArgument="&lt;webctrl id='formaPrincipal:botones' tag='TABLE' /&gt;&lt;webctrl id='formaPrincipal:btnLimpiar' type='submit' tag='BUTTON' class='ui-button ui-widget ui-state-default ui-corner-all ui-button-text-icon-left' aaname='Limpiar' check:innerText='Limpiar' /&gt;" Guid="92cea66a-1632-4f9b-a3fb-73c86f4e0f39" SearchSteps="FuzzySelector, CV" />
+                                                            </scg:List>
+                                                          </uix:TargetAnchorable.Anchors>
+                                                        </uix:TargetAnchorable>
+                                                      </uix:NClick.Target>
+                                                      <uix:NClick.VerifyOptions>
+                                                        <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
+                                                          <uix:VerifyExecutionOptions.Retry>
+                                                            <InArgument x:TypeArguments="x:Boolean" />
+                                                          </uix:VerifyExecutionOptions.Retry>
+                                                          <uix:VerifyExecutionOptions.Timeout>
+                                                            <InArgument x:TypeArguments="x:Double" />
+                                                          </uix:VerifyExecutionOptions.Timeout>
+                                                        </uix:VerifyExecutionOptions>
+                                                      </uix:NClick.VerifyOptions>
+                                                    </uix:NClick>
                                                   </Sequence>
-                                                </ActivityAction>
-                                              </ui:ForEach.Body>
-                                            </ui:ForEach>
+                                                </If.Then>
+                                                <If.Else>
+                                                  <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="416,89" sap2010:WorkflowViewState.IdRef="Sequence_595">
+                                                    <sap:WorkflowViewStateService.ViewState>
+                                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                      </scg:Dictionary>
+                                                    </sap:WorkflowViewStateService.ViewState>
+                                                  </Sequence>
+                                                </If.Else>
+                                              </If>
+                                            </Sequence>
+                                          </ActivityAction>
+                                        </ui:ForEachRow.Body>
+                                      </ui:ForEachRow>
+                                      <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="518,57" sap2010:WorkflowViewState.IdRef="CommentOut_130">
+                                        <ui:CommentOut.Body>
+                                          <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="416,108" sap2010:WorkflowViewState.IdRef="Sequence_589">
+                                            <sap:WorkflowViewStateService.ViewState>
+                                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                              </scg:Dictionary>
+                                            </sap:WorkflowViewStateService.ViewState>
+                                            <ui:InterruptibleDoWhile CurrentIndex="{x:Null}" Condition="[array_folder.Length&gt;2]" DisplayName="Do While" sap:VirtualizedContainerService.HintSize="382,48" sap2010:WorkflowViewState.IdRef="InterruptibleDoWhile_1">
+                                              <ui:InterruptibleDoWhile.Body>
+                                                <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="552,785" sap2010:WorkflowViewState.IdRef="Sequence_233">
+                                                  <sap:WorkflowViewStateService.ViewState>
+                                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                    </scg:Dictionary>
+                                                  </sap:WorkflowViewStateService.ViewState>
+                                                  <ui:ForEach x:TypeArguments="x:String" CurrentIndex="{x:Null}" DisplayName="For Each currentText" sap:VirtualizedContainerService.HintSize="518,725" sap2010:WorkflowViewState.IdRef="ForEach`1_4" Values="[array_folder]">
+                                                    <ui:ForEach.Body>
+                                                      <ActivityAction x:TypeArguments="x:String">
+                                                        <ActivityAction.Argument>
+                                                          <DelegateInArgument x:TypeArguments="x:String" Name="currentText" />
+                                                        </ActivityAction.Argument>
+                                                        <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="484,588" sap2010:WorkflowViewState.IdRef="Sequence_234">
+                                                          <sap:WorkflowViewStateService.ViewState>
+                                                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                            </scg:Dictionary>
+                                                          </sap:WorkflowViewStateService.ViewState>
+                                                          <If Condition="[array_folder.Length&gt;2]" sap:VirtualizedContainerService.HintSize="450,348" sap2010:WorkflowViewState.IdRef="If_9">
+                                                            <If.Then>
+                                                              <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="416,89" sap2010:WorkflowViewState.IdRef="Sequence_235">
+                                                                <sap:WorkflowViewStateService.ViewState>
+                                                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                                  </scg:Dictionary>
+                                                                </sap:WorkflowViewStateService.ViewState>
+                                                              </Sequence>
+                                                            </If.Then>
+                                                            <If.Else>
+                                                              <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="416,89" sap2010:WorkflowViewState.IdRef="Sequence_236">
+                                                                <sap:WorkflowViewStateService.ViewState>
+                                                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                                  </scg:Dictionary>
+                                                                </sap:WorkflowViewStateService.ViewState>
+                                                              </Sequence>
+                                                            </If.Else>
+                                                          </If>
+                                                          <uix:NCheckElement DelayBefore="0" DisplayName="Check Element 'Eliminar'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="450,180" sap2010:WorkflowViewState.IdRef="NCheckElement_2" Result="[validate_file_upload]" ScopeIdentifier="da35983c-f447-4bcc-b699-44b91a5a7f25" Version="V4">
+                                                            <uix:NCheckElement.Target>
+                                                              <uix:TargetAnchorable BrowserURL="sicerco.sic.gov.co/sicerco/carguemasivo/crearCargueMasivos.xhtml" CVScreenId="3d91589a-993f-4cc5-bb86-b460bd24122d" CvTextArea="307, 653, 209, 15" CvTextArgument="certificados-30-1-2025-16-28-7.zip" CvType="Text" DesignTimeRectangle="305, 647, 393, 33" DesignTimeScaleFactor="1" FuzzySelectorArgument="&lt;webctrl id='formaPrincipal:j_idt54' tag='TABLE' /&gt;&lt;webctrl type='' tag='TD' class='ui-panelgrid-cell' aaname='' check:innerText='certificados-30-1-2025-16-28-7.zip' /&gt;" Guid="8fa0c824-5194-45cb-af43-28565d6ac2c8" InformativeScreenshot="7892bcb60e6ed91e6624988b543f5db0.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='SICERCO' /&gt;" SearchSteps="FuzzySelector, CV" Version="V5" Visibility="Interactive">
+                                                                <uix:TargetAnchorable.Anchors>
+                                                                  <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                                                    <uix:Target CVScreenId="3d91589a-993f-4cc5-bb86-b460bd24122d" CvTextArea="730, 656, 48, 13" CvTextArgument="Eliminar" CvType="Text" DesignTimeRectangle="698, 647, 919, 33" FuzzySelectorArgument="&lt;webctrl id='formaPrincipal:j_idt54' tag='TABLE' /&gt;&lt;webctrl type='' class='ui-panelgrid-cell' tag='TD' aaname='' check:innerText='Eliminar' /&gt;" Guid="3578d537-acff-4c14-8838-749859d77a67" SearchSteps="FuzzySelector, CV" />
+                                                                  </scg:List>
+                                                                </uix:TargetAnchorable.Anchors>
+                                                              </uix:TargetAnchorable>
+                                                            </uix:NCheckElement.Target>
+                                                          </uix:NCheckElement>
+                                                        </Sequence>
+                                                      </ActivityAction>
+                                                    </ui:ForEach.Body>
+                                                  </ui:ForEach>
+                                                </Sequence>
+                                              </ui:InterruptibleDoWhile.Body>
+                                              <sap:WorkflowViewStateService.ViewState>
+                                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                                  <x:Boolean x:Key="IsPinned">True</x:Boolean>
+                                                </scg:Dictionary>
+                                              </sap:WorkflowViewStateService.ViewState>
+                                            </ui:InterruptibleDoWhile>
                                           </Sequence>
-                                        </ui:InterruptibleDoWhile.Body>
+                                        </ui:CommentOut.Body>
                                         <sap:WorkflowViewStateService.ViewState>
                                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                             <x:Boolean x:Key="IsExpanded">False</x:Boolean>
                                             <x:Boolean x:Key="IsPinned">True</x:Boolean>
                                           </scg:Dictionary>
                                         </sap:WorkflowViewStateService.ViewState>
-                                      </ui:InterruptibleDoWhile>
-                                    </Sequence>
-                                  </ui:CommentOut.Body>
-                                  <sap:WorkflowViewStateService.ViewState>
-                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                      <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-                                      <x:Boolean x:Key="IsPinned">True</x:Boolean>
-                                    </scg:Dictionary>
-                                  </sap:WorkflowViewStateService.ViewState>
-                                </ui:CommentOut>
-                                <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="518,50" sap2010:WorkflowViewState.IdRef="CommentOut_131">
-                                  <ui:CommentOut.Body>
-                                    <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="484,483" sap2010:WorkflowViewState.IdRef="Sequence_590">
-                                      <sap:WorkflowViewStateService.ViewState>
-                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                        </scg:Dictionary>
-                                      </sap:WorkflowViewStateService.ViewState>
-                                      <If Condition="[validate_file_upload]" sap:VirtualizedContainerService.HintSize="450,423" sap2010:WorkflowViewState.IdRef="If_8">
-                                        <If.Then>
-                                          <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="416,173" sap2010:WorkflowViewState.IdRef="Sequence_213">
+                                      </ui:CommentOut>
+                                      <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="518,50" sap2010:WorkflowViewState.IdRef="CommentOut_131">
+                                        <ui:CommentOut.Body>
+                                          <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="484,483" sap2010:WorkflowViewState.IdRef="Sequence_590">
                                             <sap:WorkflowViewStateService.ViewState>
                                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                               </scg:Dictionary>
                                             </sap:WorkflowViewStateService.ViewState>
-                                            <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="382,113" sap2010:WorkflowViewState.IdRef="WriteLine_33" Text="Reconocido" />
+                                            <If Condition="[validate_file_upload]" sap:VirtualizedContainerService.HintSize="450,423" sap2010:WorkflowViewState.IdRef="If_8">
+                                              <If.Then>
+                                                <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="416,173" sap2010:WorkflowViewState.IdRef="Sequence_213">
+                                                  <sap:WorkflowViewStateService.ViewState>
+                                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                    </scg:Dictionary>
+                                                  </sap:WorkflowViewStateService.ViewState>
+                                                  <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="382,113" sap2010:WorkflowViewState.IdRef="WriteLine_33" Text="Reconocido" />
+                                                </Sequence>
+                                              </If.Then>
+                                              <If.Else>
+                                                <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="416,89" sap2010:WorkflowViewState.IdRef="Sequence_214">
+                                                  <sap:WorkflowViewStateService.ViewState>
+                                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                    </scg:Dictionary>
+                                                  </sap:WorkflowViewStateService.ViewState>
+                                                </Sequence>
+                                              </If.Else>
+                                            </If>
                                           </Sequence>
-                                        </If.Then>
-                                        <If.Else>
-                                          <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="416,89" sap2010:WorkflowViewState.IdRef="Sequence_214">
-                                            <sap:WorkflowViewStateService.ViewState>
-                                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                              </scg:Dictionary>
-                                            </sap:WorkflowViewStateService.ViewState>
-                                          </Sequence>
-                                        </If.Else>
-                                      </If>
+                                        </ui:CommentOut.Body>
+                                        <sap:WorkflowViewStateService.ViewState>
+                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                            <x:Boolean x:Key="IsPinned">True</x:Boolean>
+                                          </scg:Dictionary>
+                                        </sap:WorkflowViewStateService.ViewState>
+                                      </ui:CommentOut>
                                     </Sequence>
-                                  </ui:CommentOut.Body>
-                                  <sap:WorkflowViewStateService.ViewState>
-                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                      <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-                                      <x:Boolean x:Key="IsPinned">True</x:Boolean>
-                                    </scg:Dictionary>
-                                  </sap:WorkflowViewStateService.ViewState>
-                                </ui:CommentOut>
-                              </Sequence>
-                            </ActivityAction>
-                          </uix:NApplicationCard.Body>
-                          <uix:NApplicationCard.TargetApp>
-                            <uix:TargetApp Area="-8, -8, 1936, 1048" BrowserType="Edge" IconBase64="iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAADISURBVDhPY2BAAm/3MvyHYWRxkgCyAaqKUv/RMbp6FADSmBLAxINkwPf/SIAoQ5CBqqLUR3QDYDSyIgxnwhQga4ZpRFcDNgBdETINAyBvIQOCBiCz0TXD5HAagIyRoxaG8RqADkAanKfv+h+x7gLcgJ/HWRFpBdnPyBimGWZA8uYrYIzsEoIugCkEaQQZAgIgGoThhhDrAhAwn3sExQUoBmAD6AbAbMZwAS6spoSIBZA3YIagGEAIIBuANRCJBcgafx5n5YWJAwA++wFozPzu/QAAAABJRU5ErkJggg==" InformativeScreenshot="4e269fa3607d9e121bc3abc73a2dfecb.jpg" Selector="&lt;html app='msedge.exe' title='SICERCO' /&gt;" Url="https://sicerco.sic.gov.co/sicerco/index.xhtml?faces-redirect=true" Version="V2" />
-                          </uix:NApplicationCard.TargetApp>
-                        </uix:NApplicationCard>
-                      </Sequence>
+                                  </ActivityAction>
+                                </uix:NApplicationCard.Body>
+                                <uix:NApplicationCard.TargetApp>
+                                  <uix:TargetApp Area="-8, -8, 1936, 1048" BrowserType="Edge" IconBase64="iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAADISURBVDhPY2BAAm/3MvyHYWRxkgCyAaqKUv/RMbp6FADSmBLAxINkwPf/SIAoQ5CBqqLUR3QDYDSyIgxnwhQga4ZpRFcDNgBdETINAyBvIQOCBiCz0TXD5HAagIyRoxaG8RqADkAanKfv+h+x7gLcgJ/HWRFpBdnPyBimGWZA8uYrYIzsEoIugCkEaQQZAgIgGoThhhDrAhAwn3sExQUoBmAD6AbAbMZwAS6spoSIBZA3YIagGEAIIBuANRCJBcgafx5n5YWJAwA++wFozPzu/QAAAABJRU5ErkJggg==" InformativeScreenshot="4e269fa3607d9e121bc3abc73a2dfecb.jpg" Selector="&lt;html app='msedge.exe' title='SICERCO' /&gt;" Url="https://sicerco.sic.gov.co/sicerco/index.xhtml?faces-redirect=true" Version="V2" />
+                                </uix:NApplicationCard.TargetApp>
+                              </uix:NApplicationCard>
+                            </Sequence>
+                          </Sequence>
+                        </ui:CommentOut.Body>
+                      </ui:CommentOut>
                     </FlowStep>
                   </FlowStep.Next>
                 </FlowStep>

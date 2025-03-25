@@ -1,0 +1,13 @@
+﻿{
+  "Name": "Superintendencia de Industria y Comercio.",
+  "Type": "Screen",
+  "Id": "JQmOgYX7z0Gx4EZFrULdMg",
+  "Reference": "hbAC0x9AP0udkm6GeCl4UA/JQmOgYX7z0Gx4EZFrULdMg",
+  "ParentRef": "hbAC0x9AP0udkm6GeCl4UA/xS0_g8NdZUSei47qXitLig",
+  "Created": "2025-03-21T13:11:54.4936575Z",
+  "Updated": "2025-03-21T13:11:54.4936575Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=24.12.4.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=24.12.3.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}
