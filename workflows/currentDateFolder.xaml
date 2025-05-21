@@ -129,13 +129,13 @@
       <AssemblyReference>WindowsBase</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="CurrentDataFolder" sap:VirtualizedContainerService.HintSize="774,4823" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="CurrentDataFolder" sap:VirtualizedContainerService.HintSize="1014,4563" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <Sequence DisplayName="Creación de carpetas con la fecha actual" sap:VirtualizedContainerService.HintSize="774,4800" sap2010:WorkflowViewState.IdRef="Sequence_2">
+    <Sequence DisplayName="Creación de carpetas con la fecha actual" sap:VirtualizedContainerService.HintSize="740,4540" sap2010:WorkflowViewState.IdRef="Sequence_2">
       <Sequence.Variables>
         <Variable x:TypeArguments="x:Int32" Default="1" Name="count" />
         <Variable x:TypeArguments="s:String[]" Name="folder_items" />
@@ -148,7 +148,7 @@
           <x:Boolean x:Key="IsPinned">False</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <Sequence DisplayName="Inicialización de párametros" sap:VirtualizedContainerService.HintSize="740,1324" sap2010:WorkflowViewState.IdRef="Sequence_29">
+      <Sequence DisplayName="Inicialización de párametros" sap:VirtualizedContainerService.HintSize="706,1151" sap2010:WorkflowViewState.IdRef="Sequence_29">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -158,7 +158,6 @@
         <ui:Comment sap:VirtualizedContainerService.HintSize="434,88" sap2010:WorkflowViewState.IdRef="Comment_6" Text="Parámetros: &#xA;&#xA;" />
         <ui:Comment sap:VirtualizedContainerService.HintSize="434,107" sap2010:WorkflowViewState.IdRef="Comment_9" Text="folder_location: Ruta la cual se encuentra ubicado los archivos a mover" />
         <ui:Comment sap:VirtualizedContainerService.HintSize="434,107" sap2010:WorkflowViewState.IdRef="Comment_10" Text="destination_folder: Ruta en donde se van a pegar los archivos." />
-        <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="434,173" sap2010:WorkflowViewState.IdRef="LogMessage_11" Level="Trace" Message="[&quot;Valor Parametros: &quot; + vbCrLf +&#xA;&quot;folder_location: &quot; + folder_location +  vbCrLf +&#xA;&quot;destination_folder: &quot; + destination_folder]" />
         <Assign sap:VirtualizedContainerService.HintSize="434,114" sap2010:WorkflowViewState.IdRef="Assign_32">
           <Assign.To>
             <OutArgument x:TypeArguments="s:String[]">[folder_Items]</OutArgument>
@@ -206,7 +205,7 @@
           </sap:WorkflowViewStateService.ViewState>
         </ui:AddDataRow>
       </Sequence>
-      <Sequence DisplayName="Recorrer archivos de la ruta base" sap:VirtualizedContainerService.HintSize="740,3393" sap2010:WorkflowViewState.IdRef="Sequence_9">
+      <Sequence DisplayName="Recorrer archivos de la ruta base" sap:VirtualizedContainerService.HintSize="706,3306" sap2010:WorkflowViewState.IdRef="Sequence_9">
         <Sequence.Variables>
           <Variable x:TypeArguments="x:String" Name="variable1" />
           <Variable x:TypeArguments="x:String" Name="new_route" />
@@ -217,13 +216,13 @@
             <x:Boolean x:Key="IsPinned">False</x:Boolean>
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
-        <ui:ForEach x:TypeArguments="x:String" CurrentIndex="{x:Null}" DisplayName="For Each currentText" sap:VirtualizedContainerService.HintSize="706,3235" sap2010:WorkflowViewState.IdRef="ForEach`1_1" Values="[folder_items]">
+        <ui:ForEach x:TypeArguments="x:String" CurrentIndex="{x:Null}" DisplayName="For Each currentText" sap:VirtualizedContainerService.HintSize="672,2931" sap2010:WorkflowViewState.IdRef="ForEach`1_1" Values="[folder_items]">
           <ui:ForEach.Body>
             <ActivityAction x:TypeArguments="x:String">
               <ActivityAction.Argument>
                 <DelegateInArgument x:TypeArguments="x:String" Name="currentText" />
               </ActivityAction.Argument>
-              <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="672,3089" sap2010:WorkflowViewState.IdRef="Sequence_3">
+              <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="638,2785" sap2010:WorkflowViewState.IdRef="Sequence_3">
                 <Sequence.Variables>
                   <Variable x:TypeArguments="x:String" Name="row_value" />
                 </Sequence.Variables>
@@ -233,8 +232,8 @@
                     <x:Boolean x:Key="IsPinned">False</x:Boolean>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
-                <ui:Comment sap:VirtualizedContainerService.HintSize="638,126" sap2010:WorkflowViewState.IdRef="Comment_7" Text="Condición: Aqui puedes escoger  el limite de cuantas veces quiere que recorra cada archivo" />
-                <If Condition="[count&lt;=250]" sap:VirtualizedContainerService.HintSize="638,2798" sap2010:WorkflowViewState.IdRef="If_1">
+                <ui:Comment sap:VirtualizedContainerService.HintSize="604,126" sap2010:WorkflowViewState.IdRef="Comment_7" Text="Condición: Aqui puedes escoger  el limite de cuantas veces quiere que recorra cada archivo" />
+                <If Condition="[count&lt;=250]" sap:VirtualizedContainerService.HintSize="604,2494" sap2010:WorkflowViewState.IdRef="If_1">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -242,14 +241,13 @@
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
                   <If.Then>
-                    <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="416,359" sap2010:WorkflowViewState.IdRef="Sequence_13">
+                    <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="416,237" sap2010:WorkflowViewState.IdRef="Sequence_13">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                           <x:Boolean x:Key="IsPinned">False</x:Boolean>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
-                      <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="382,122" sap2010:WorkflowViewState.IdRef="WriteLine_6" Text="[&quot;DESTINATION_FOLDER&quot;+ destination_folder]" />
                       <ui:CopyFile ContinueOnError="{x:Null}" Destination="[destination_folder]" DisplayName="Copy File" sap:VirtualizedContainerService.HintSize="382,177" sap2010:WorkflowViewState.IdRef="CopyFile_1" Overwrite="True" Path="[Path.GetFullPath(currentText)]">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -260,7 +258,7 @@
                     </Sequence>
                   </If.Then>
                   <If.Else>
-                    <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="604,2269" sap2010:WorkflowViewState.IdRef="Sequence_4">
+                    <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="570,2087" sap2010:WorkflowViewState.IdRef="Sequence_4">
                       <Sequence.Variables>
                         <Variable x:TypeArguments="x:Int32" Name="folder_counter" />
                       </Sequence.Variables>
@@ -270,7 +268,7 @@
                           <x:Boolean x:Key="IsPinned">False</x:Boolean>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
-                      <Assign sap:VirtualizedContainerService.HintSize="570,114" sap2010:WorkflowViewState.IdRef="Assign_5">
+                      <Assign sap:VirtualizedContainerService.HintSize="536,114" sap2010:WorkflowViewState.IdRef="Assign_5">
                         <Assign.To>
                           <OutArgument x:TypeArguments="x:Int32">[count]</OutArgument>
                         </Assign.To>
@@ -278,8 +276,8 @@
                           <InArgument x:TypeArguments="x:Int32">1</InArgument>
                         </Assign.Value>
                       </Assign>
-                      <ui:Comment sap:VirtualizedContainerService.HintSize="570,126" sap2010:WorkflowViewState.IdRef="Comment_8" Text="Condición: Sino existe la carpeta copia los archivos, de lo contrario crea una y asi mismo copia los archivos." />
-                      <If Condition="[Not System.IO.Directory.Exists(destination_folder)]" sap:VirtualizedContainerService.HintSize="570,1969" sap2010:WorkflowViewState.IdRef="If_4">
+                      <ui:Comment sap:VirtualizedContainerService.HintSize="536,126" sap2010:WorkflowViewState.IdRef="Comment_8" Text="Condición: Sino existe la carpeta copia los archivos, de lo contrario crea una y asi mismo copia los archivos." />
+                      <If Condition="[Not System.IO.Directory.Exists(destination_folder)]" sap:VirtualizedContainerService.HintSize="536,1787" sap2010:WorkflowViewState.IdRef="If_4">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -287,14 +285,13 @@
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
                         <If.Then>
-                          <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="416,471" sap2010:WorkflowViewState.IdRef="Sequence_18">
+                          <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="416,349" sap2010:WorkflowViewState.IdRef="Sequence_18">
                             <sap:WorkflowViewStateService.ViewState>
                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                 <x:Boolean x:Key="IsPinned">False</x:Boolean>
                               </scg:Dictionary>
                             </sap:WorkflowViewStateService.ViewState>
-                            <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="382,122" sap2010:WorkflowViewState.IdRef="WriteLine_7" Text="[&quot;DESTINATION_FOLDER&quot;+ destination_folder]" />
                             <ui:CreateDirectory ContinueOnError="{x:Null}" Output="{x:Null}" DisplayName="Create Folder" sap:VirtualizedContainerService.HintSize="382,112" sap2010:WorkflowViewState.IdRef="CreateDirectory_2" Path="[destination_folder]" />
                             <ui:CopyFile ContinueOnError="{x:Null}" Destination="[destination_folder]" DisplayName="Copy File" sap:VirtualizedContainerService.HintSize="382,177" sap2010:WorkflowViewState.IdRef="CopyFile_2" Overwrite="True" Path="[Path.GetFullPath(currentText)]">
                               <sap:WorkflowViewStateService.ViewState>
@@ -306,14 +303,14 @@
                           </Sequence>
                         </If.Then>
                         <If.Else>
-                          <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="536,1337" sap2010:WorkflowViewState.IdRef="Sequence_5">
+                          <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="502,1277" sap2010:WorkflowViewState.IdRef="Sequence_5">
                             <sap:WorkflowViewStateService.ViewState>
                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                 <x:Boolean x:Key="IsPinned">False</x:Boolean>
                               </scg:Dictionary>
                             </sap:WorkflowViewStateService.ViewState>
-                            <Assign sap:VirtualizedContainerService.HintSize="502,114" sap2010:WorkflowViewState.IdRef="Assign_12">
+                            <Assign sap:VirtualizedContainerService.HintSize="468,114" sap2010:WorkflowViewState.IdRef="Assign_12">
                               <Assign.To>
                                 <OutArgument x:TypeArguments="x:Int32">[folder_counter]</OutArgument>
                               </Assign.To>
@@ -327,7 +324,7 @@
                                 </scg:Dictionary>
                               </sap:WorkflowViewStateService.ViewState>
                             </Assign>
-                            <Assign sap:VirtualizedContainerService.HintSize="502,114" sap2010:WorkflowViewState.IdRef="Assign_29">
+                            <Assign sap:VirtualizedContainerService.HintSize="468,114" sap2010:WorkflowViewState.IdRef="Assign_29">
                               <Assign.To>
                                 <OutArgument x:TypeArguments="x:String">[new_route]</OutArgument>
                               </Assign.To>
@@ -341,7 +338,7 @@
                                 </scg:Dictionary>
                               </sap:WorkflowViewStateService.ViewState>
                             </Assign>
-                            <ui:InterruptibleWhile CurrentIndex="{x:Null}" Condition="[System.IO.Directory.Exists(new_route)]" DisplayName="While" sap:VirtualizedContainerService.HintSize="502,425" sap2010:WorkflowViewState.IdRef="InterruptibleWhile_1">
+                            <ui:InterruptibleWhile CurrentIndex="{x:Null}" Condition="[System.IO.Directory.Exists(new_route)]" DisplayName="While" sap:VirtualizedContainerService.HintSize="468,57" sap2010:WorkflowViewState.IdRef="InterruptibleWhile_1">
                               <ui:InterruptibleWhile.Body>
                                 <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="468,279" sap2010:WorkflowViewState.IdRef="Sequence_22">
                                   <sap:WorkflowViewStateService.ViewState>
@@ -375,22 +372,21 @@
                               </ui:InterruptibleWhile.Body>
                               <sap:WorkflowViewStateService.ViewState>
                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
                                   <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                 </scg:Dictionary>
                               </sap:WorkflowViewStateService.ViewState>
                             </ui:InterruptibleWhile>
-                            <Sequence DisplayName="Asignar valor de la rutas creadas por carpetas" sap:VirtualizedContainerService.HintSize="502,99" sap2010:WorkflowViewState.IdRef="Sequence_49">
+                            <Sequence DisplayName="Asignar valor de la rutas creadas por carpetas" sap:VirtualizedContainerService.HintSize="468,529" sap2010:WorkflowViewState.IdRef="Sequence_49">
                               <Sequence.Variables>
                                 <Variable x:TypeArguments="sd:DataRow" Name="second_row" />
                               </Sequence.Variables>
                               <sap:WorkflowViewStateService.ViewState>
                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                   <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                 </scg:Dictionary>
                               </sap:WorkflowViewStateService.ViewState>
-                              <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="434,173" sap2010:WorkflowViewState.IdRef="LogMessage_12" Level="Info" Message="[&quot;Ruta de la carpeta creada:&quot; + new_route]" />
                               <Assign sap:VirtualizedContainerService.HintSize="434,114" sap2010:WorkflowViewState.IdRef="Assign_36">
                                 <Assign.To>
                                   <OutArgument x:TypeArguments="sd:DataRow">[second_row]</OutArgument>
@@ -415,7 +411,7 @@
                                 </sap:WorkflowViewStateService.ViewState>
                               </ui:AddDataRow>
                             </Sequence>
-                            <ui:CreateDirectory ContinueOnError="{x:Null}" Output="{x:Null}" DisplayName="Create Folder" sap:VirtualizedContainerService.HintSize="502,112" sap2010:WorkflowViewState.IdRef="CreateDirectory_3" Path="[new_route]">
+                            <ui:CreateDirectory ContinueOnError="{x:Null}" Output="{x:Null}" DisplayName="Create Folder" sap:VirtualizedContainerService.HintSize="468,112" sap2010:WorkflowViewState.IdRef="CreateDirectory_3" Path="[new_route]">
                               <sap:WorkflowViewStateService.ViewState>
                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -423,7 +419,7 @@
                                 </scg:Dictionary>
                               </sap:WorkflowViewStateService.ViewState>
                             </ui:CreateDirectory>
-                            <Assign sap:VirtualizedContainerService.HintSize="502,114" sap2010:WorkflowViewState.IdRef="Assign_37">
+                            <Assign sap:VirtualizedContainerService.HintSize="468,114" sap2010:WorkflowViewState.IdRef="Assign_37">
                               <Assign.To>
                                 <OutArgument x:TypeArguments="x:String">[destination_folder]</OutArgument>
                               </Assign.To>
@@ -437,8 +433,7 @@
                                 </scg:Dictionary>
                               </sap:WorkflowViewStateService.ViewState>
                             </Assign>
-                            <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="502,122" sap2010:WorkflowViewState.IdRef="WriteLine_8" Text="[&quot;DESTINATION_FOLDER&quot;+ destination_folder]" />
-                            <ui:CopyFile ContinueOnError="{x:Null}" Destination="[destination_folder]" DisplayName="Copy File" sap:VirtualizedContainerService.HintSize="502,177" sap2010:WorkflowViewState.IdRef="CopyFile_3" Overwrite="True" Path="[Path.GetFullPath(currentText)]">
+                            <ui:CopyFile ContinueOnError="{x:Null}" Destination="[destination_folder]" DisplayName="Copy File" sap:VirtualizedContainerService.HintSize="468,177" sap2010:WorkflowViewState.IdRef="CopyFile_3" Overwrite="True" Path="[Path.GetFullPath(currentText)]">
                               <sap:WorkflowViewStateService.ViewState>
                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                   <x:Boolean x:Key="IsPinned">False</x:Boolean>
@@ -452,7 +447,7 @@
                     </Sequence>
                   </If.Else>
                 </If>
-                <Assign sap:VirtualizedContainerService.HintSize="638,105" sap2010:WorkflowViewState.IdRef="Assign_4">
+                <Assign sap:VirtualizedContainerService.HintSize="604,105" sap2010:WorkflowViewState.IdRef="Assign_4">
                   <Assign.To>
                     <OutArgument x:TypeArguments="x:Int32">[count]</OutArgument>
                   </Assign.To>
@@ -476,38 +471,21 @@
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
         </ui:ForEach>
-        <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="706,75" sap2010:WorkflowViewState.IdRef="CommentOut_18">
-          <ui:CommentOut.Body>
-            <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="484,352" sap2010:WorkflowViewState.IdRef="Sequence_55">
-              <sap:WorkflowViewStateService.ViewState>
-                <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                </scg:Dictionary>
-              </sap:WorkflowViewStateService.ViewState>
-              <Sequence DisplayName="Asignar valor de la rutas creadas por carpetas" sap:VirtualizedContainerService.HintSize="450,292" sap2010:WorkflowViewState.IdRef="Sequence_53">
-                <sap:WorkflowViewStateService.ViewState>
-                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                  </scg:Dictionary>
-                </sap:WorkflowViewStateService.ViewState>
-                <ui:AddDataRow ArrayRow="{x:Null}" DataRow="[new_row]" DataTable="[create_folder_path]" DisplayName="Add Data Row" sap:VirtualizedContainerService.HintSize="416,209" sap2010:WorkflowViewState.IdRef="AddDataRow_2">
-                  <sap:WorkflowViewStateService.ViewState>
-                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                    </scg:Dictionary>
-                  </sap:WorkflowViewStateService.ViewState>
-                </ui:AddDataRow>
-              </Sequence>
-            </Sequence>
-          </ui:CommentOut.Body>
+        <Sequence DisplayName="Asignar valor de la rutas creadas por carpetas" sap:VirtualizedContainerService.HintSize="672,292" sap2010:WorkflowViewState.IdRef="Sequence_56">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
-              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               <x:Boolean x:Key="IsPinned">False</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-        </ui:CommentOut>
+          <ui:AddDataRow ArrayRow="{x:Null}" DataRow="[new_row]" DataTable="[create_folder_path]" DisplayName="Add Data Row" sap:VirtualizedContainerService.HintSize="416,209" sap2010:WorkflowViewState.IdRef="AddDataRow_2">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+          </ui:AddDataRow>
+        </Sequence>
       </Sequence>
     </Sequence>
   </Sequence>
