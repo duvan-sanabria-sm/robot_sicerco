@@ -5,9 +5,9 @@
   "main": "Main.xaml",
   "dependencies": {
     "UiPath.Database.Activities": "1.9.0",
-    "UiPath.Excel.Activities": "[2.24.4]",
+    "UiPath.Excel.Activities": "[3.0.1]",
     "UiPath.IntegrationService.Activities": "[1.14.0]",
-    "UiPath.Mail.Activities": "[1.24.2]",
+    "UiPath.Mail.Activities": "[2.0.11]",
     "UiPath.MicrosoftOffice365.Activities": "[2.7.24]",
     "UiPath.System.Activities": "[24.11.0-preview]",
     "UiPath.System.Activities.Runtime": "[24.11.0-preview]",
