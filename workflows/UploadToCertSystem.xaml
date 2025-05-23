@@ -130,13 +130,13 @@
       <AssemblyReference>WindowsBase</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="UploadToCertSystem" sap:VirtualizedContainerService.HintSize="1124,2478" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="UploadToCertSystem" sap:VirtualizedContainerService.HintSize="1229,2249" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <Sequence DisplayName="Subida del documento al sistema de certificado" sap:VirtualizedContainerService.HintSize="1124,2455" sap2010:WorkflowViewState.IdRef="Sequence_3">
+    <Sequence DisplayName="Subida del documento al sistema de certificado" sap:VirtualizedContainerService.HintSize="1124,2226" sap2010:WorkflowViewState.IdRef="Sequence_3">
       <Sequence.Variables>
         <Variable x:TypeArguments="sd:DataTable" Name="clean_datas" />
       </Sequence.Variables>
@@ -146,25 +146,25 @@
           <x:Boolean x:Key="IsPinned">False</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[clean_data]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="1090,2372" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
+      <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[clean_data]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="1090,2143" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
         <ui:ForEachRow.Body>
           <ActivityAction x:TypeArguments="sd:DataRow">
             <ActivityAction.Argument>
               <DelegateInArgument x:TypeArguments="sd:DataRow" Name="CurrentRow" />
             </ActivityAction.Argument>
-            <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="1056,2185" sap2010:WorkflowViewState.IdRef="Sequence_8">
+            <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="1056,1956" sap2010:WorkflowViewState.IdRef="Sequence_8">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Superintendencia de Industria y Comercio." HealingAgentBehavior="Job" sap:VirtualizedContainerService.HintSize="1022,2125" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" IsDisplayNameAuto="True" ScopeGuid="df83355e-abe8-4bba-a9a1-7b99a8ef4e62" Version="V2">
+              <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Superintendencia de Industria y Comercio." HealingAgentBehavior="Job" sap:VirtualizedContainerService.HintSize="1022,1896" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" IsDisplayNameAuto="True" ScopeGuid="df83355e-abe8-4bba-a9a1-7b99a8ef4e62" Version="V2">
                 <uix:NApplicationCard.Body>
                   <ActivityAction x:TypeArguments="x:Object">
                     <ActivityAction.Argument>
                       <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
                     </ActivityAction.Argument>
-                    <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="988,1835" sap2010:WorkflowViewState.IdRef="Sequence_2">
+                    <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="988,1606" sap2010:WorkflowViewState.IdRef="Sequence_2">
                       <Sequence.Variables>
                         <Variable x:TypeArguments="x:Boolean" Name="check_window" />
                         <Variable x:TypeArguments="x:String" Name="text_error" />
@@ -213,7 +213,7 @@
                           </uix:VerifyExecutionOptions>
                         </uix:NClick.VerifyOptions>
                       </uix:NClick>
-                      <uix:NCheckState DisplayName="Check App State 'Mensaje'" sap:VirtualizedContainerService.HintSize="954,983" sap2010:WorkflowViewState.IdRef="NCheckState_1" ScopeIdentifier="df83355e-abe8-4bba-a9a1-7b99a8ef4e62" Timeout="60" Version="V4">
+                      <uix:NCheckState DisplayName="Check App State 'Mensaje'" sap:VirtualizedContainerService.HintSize="954,936" sap2010:WorkflowViewState.IdRef="NCheckState_1" ScopeIdentifier="df83355e-abe8-4bba-a9a1-7b99a8ef4e62" Timeout="30" Version="V4">
                         <uix:NCheckState.IfExists>
                           <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="450,627" sap2010:WorkflowViewState.IdRef="Sequence_24">
                             <sap:WorkflowViewStateService.ViewState>
@@ -326,17 +326,6 @@
                           </uix:TargetAnchorable>
                         </uix:NCheckState.Target>
                       </uix:NCheckState>
-                      <uix:NCheckElement ContinueOnError="True" DelayBefore="0" DisplayName="Check Element 'Mensaje'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="954,182" sap2010:WorkflowViewState.IdRef="NCheckElement_10" Result="[check_window]" ScopeIdentifier="df83355e-abe8-4bba-a9a1-7b99a8ef4e62" Version="V4">
-                        <uix:NCheckElement.Target>
-                          <uix:TargetAnchorable CVScreenId="8431808e-e7c7-4da0-9407-f8fa73dbdfe7" CvTextArea="65, 43, 239, 12" CvTextArgument="Se han encontrado los siguientes errores:" CvType="Text" DesignTimeRectangle="65, 41, 421, 16" DesignTimeScaleFactor="1" ElementType="Text" FullSelectorArgument="&lt;java name='Se han encontrado los siguientes errores: ' role='label' /&gt;" FuzzySelectorArgument="&lt;java name='Se han encontrado los siguientes errores: ' role='label' check:text='Se han encontrado los siguientes errores:' /&gt;" Guid="631ec554-9ebc-43e6-8e0e-b0be9663b80c" InformativeScreenshot="2c5af12be3a3a435f2fd4990a617767a.png" IsResponsive="True" ScopeSelectorArgument="&lt;wnd app='java*.exe' cls='SunAwtDialog' title='Mensaje' /&gt;" SearchSteps="Selector, FuzzySelector, CV" Version="V5" Visibility="Interactive">
-                            <uix:TargetAnchorable.Anchors>
-                              <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
-                                <uix:Target CVScreenId="8431808e-e7c7-4da0-9407-f8fa73dbdfe7" CvElementArea="218, 123, 66, 26" CvTextArea="228, 130, 46, 14" CvTextArgument="Aceptar" CvType="Button" DesignTimeRectangle="218, 123, 67, 26" ElementType="Button" FullSelectorArgument="&lt;java name='Aceptar' role='push button' /&gt;" FuzzySelectorArgument="&lt;java name='Aceptar' role='push button' check:text='Aceptar' /&gt;" Guid="cf17b585-fd7f-4536-8d3f-5a116be3b63a" SearchSteps="Selector, FuzzySelector, CV" />
-                              </scg:List>
-                            </uix:TargetAnchorable.Anchors>
-                          </uix:TargetAnchorable>
-                        </uix:NCheckElement.Target>
-                      </uix:NCheckElement>
                     </Sequence>
                   </ActivityAction>
                 </uix:NApplicationCard.Body>
@@ -353,6 +342,12 @@
             </Sequence>
           </ActivityAction>
         </ui:ForEachRow.Body>
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
       </ui:ForEachRow>
     </Sequence>
   </Sequence>
