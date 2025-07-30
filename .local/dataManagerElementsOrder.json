@@ -1,0 +1,141 @@
+{
+  "Workflows": [
+    {
+      "Path": null,
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": null,
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Main.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "identification&Flowchart_1",
+        "newRow&Flowchart_1",
+        "second_database_connection&Flowchart_1",
+        "table&Flowchart_1",
+        "official_sicerco_data&Flowchart_1",
+        "sicerco_loading_route&Flowchart_1",
+        "folder_path&Flowchart_1",
+        "pdf_folder_path&Flowchart_1",
+        "array_folder&Flowchart_1",
+        "index_row&Flowchart_1",
+        "dt_excel&Flowchart_1",
+        "destination_folder_day&Flowchart_1",
+        "create_folder_path&Flowchart_1",
+        "original_route&Flowchart_1",
+        "currentYear&Sequence_190",
+        "file_exists&Sequence_190",
+        "currentMonth&Sequence_190",
+        "destination_folder_month&Sequence_190",
+        "date_format&Sequence_190",
+        "filtered_datatable&Sequence_190",
+        "index_start&Sequence_190",
+        "folder_location&Sequence_190",
+        "destination_folder_year&Sequence_190",
+        "original_copy_sicerco_route&Sequence_168",
+        "filtered_table&Sequence_168",
+        "variable1&Sequence_168",
+        "pdfGroupedByDate&Sequence_168",
+        "final_folder&Sequence_168",
+        "pdf_files&Sequence_168",
+        "folder_index&Sequence_168",
+        "folderFilesDict&Sequence_168",
+        "filteredData&Sequence_168",
+        "dFiltrado&Sequence_168",
+        "data_final&Sequence_168",
+        "filtered_rows&Sequence_168",
+        "current&Sequence_168",
+        "variable2&Sequence_168",
+        "resultTable&Sequence_168",
+        "variable3&Sequence_168",
+        "count&Sequence_168",
+        "validation&Sequence_168",
+        "sicerco_route&Sequence_168",
+        "sicerco_copy&Sequence_168",
+        "variable1&Sequence_545",
+        "filtered_datatable&Sequence_545",
+        "output_created_folders&Sequence_545",
+        "previous_folder&Sequence_545",
+        "folder_index&Sequence_545",
+        "total_folders&Sequence_545",
+        "last_folder_processed&Sequence_545",
+        "clean_rows&Sequence_564",
+        "current_folder&Sequence_549",
+        "files&Sequence_549",
+        "total_files&Sequence_549",
+        "file_index&Sequence_549",
+        "file_name&Sequence_548",
+        "find_document&Sequence_548",
+        "variable2&Sequence_548",
+        "matched_rows&Sequence_548",
+        "new_row_found&Sequence_548",
+        "hello&Sequence_587",
+        "user&Sequence_211",
+        "password&Sequence_211",
+        "validate_file_upload&Sequence_211",
+        "validate_upload_folder&Sequence_588"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "clean_data"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "workflows/currentDateFolder.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "second_row&Sequence_49",
+        "new_route&Sequence_9",
+        "variable1&Sequence_9",
+        "new_row&Sequence_2",
+        "base_route&Sequence_2",
+        "count&Sequence_2",
+        "folder_items&Sequence_2",
+        "row_value&Sequence_3",
+        "folder_counter&Sequence_4"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "create_folder_path",
+        "folder_location",
+        "destination_folder"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "workflows/FormatDataBySicercoManual.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "emission_path&Sequence_2",
+        "second_database_connection&Sequence_1",
+        "table&Sequence_1",
+        "connect_database&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "official_sicerco_data"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "workflows/UploadToCertSystem.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "clean_datas&Sequence_3",
+        "clean_data&Sequence_2",
+        "check_window&Sequence_2",
+        "text_error&Sequence_2",
+        "count_start&Sequence_2"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "clean_data"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    }
+  ]
+}
