@@ -108,7 +108,7 @@
       <x:Boolean x:Key="ShouldExpandAll">True</x:Boolean>
     </scg:Dictionary>
   </sap:WorkflowViewStateService.ViewState>
-  <Sequence DisplayName="FormatDataBySicercoManual" sap:VirtualizedContainerService.HintSize="920,1130" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="FormatDataBySicercoManual" sap:VirtualizedContainerService.HintSize="730.8000000000001,927.2" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="ui:DatabaseConnection" Name="connect_database" />
       <Variable x:TypeArguments="sd:DataTable" Name="table" />
@@ -119,7 +119,7 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="486,1107" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+    <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="484.8,904" sap2010:WorkflowViewState.IdRef="TryCatch_1">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsPinned">False</x:Boolean>
@@ -127,7 +127,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
       <TryCatch.Try>
-        <Sequence DisplayName="Conector ODBC a un documento de Excel" sap:VirtualizedContainerService.HintSize="484,689" sap2010:WorkflowViewState.IdRef="Sequence_2">
+        <Sequence DisplayName="Conector ODBC a un documento de Excel" sap:VirtualizedContainerService.HintSize="483.2,688.8" sap2010:WorkflowViewState.IdRef="Sequence_2">
           <Sequence.Variables>
             <Variable x:TypeArguments="x:String" Name="emission_path" />
           </Sequence.Variables>
@@ -137,7 +137,7 @@
               <x:Boolean x:Key="IsPinned">False</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <ui:GetRobotAsset TimeoutMS="{x:Null}" AssetName="Ruta Emisión" CacheStrategy="None" DisplayName="Get Asset" FolderPath="Servimeters/Retie/Dictámenes" sap:VirtualizedContainerService.HintSize="450,176" sap2010:WorkflowViewState.IdRef="GetRobotAsset_1">
+          <ui:GetRobotAsset TimeoutMS="{x:Null}" AssetName="EmisionOdbc" CacheStrategy="None" DisplayName="Get Asset" FolderPath="Servimeters/Retie/Dictámenes" sap:VirtualizedContainerService.HintSize="449.6,175.2" sap2010:WorkflowViewState.IdRef="GetRobotAsset_1">
             <ui:GetRobotAsset.Value>
               <OutArgument x:TypeArguments="x:String">[emission_path]</OutArgument>
             </ui:GetRobotAsset.Value>
@@ -148,7 +148,7 @@
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
           </ui:GetRobotAsset>
-          <ui:DatabaseConnect DisplayName="Conectar ODBC con el Excel" sap:VirtualizedContainerService.HintSize="450,92" sap2010:WorkflowViewState.IdRef="DatabaseConnect_3" ProviderName="System.Data.Odbc" ConnectionString="[emission_path]" DatabaseConnection="[connect_database]">
+          <ui:DatabaseConnect DisplayName="Conectar ODBC con el Excel" sap:VirtualizedContainerService.HintSize="449.6,92" sap2010:WorkflowViewState.IdRef="DatabaseConnect_3" ProviderName="System.Data.Odbc" ConnectionString="[emission_path]" DatabaseConnection="[connect_database]">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsPinned">False</x:Boolean>
@@ -156,14 +156,14 @@
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
           </ui:DatabaseConnect>
-          <Sequence DisplayName="Seleccionar tabla de datos" sap:VirtualizedContainerService.HintSize="450,230" sap2010:WorkflowViewState.IdRef="Sequence_10">
+          <Sequence DisplayName="Seleccionar tabla de datos" sap:VirtualizedContainerService.HintSize="449.6,230.4" sap2010:WorkflowViewState.IdRef="Sequence_10">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                 <x:Boolean x:Key="IsPinned">False</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <ui:ExecuteQuery ContinueOnError="{x:Null}" TimeoutMS="{x:Null}" DataTable="[official_sicerco_data]" DisplayName="Run Query" ExistingDbConnection="[connect_database]" sap:VirtualizedContainerService.HintSize="416,138" sap2010:WorkflowViewState.IdRef="ExecuteQuery_10" Sql="SELECT*FROM [SICERCO$]&#xA;">
+            <ui:ExecuteQuery ContinueOnError="{x:Null}" TimeoutMS="{x:Null}" DataTable="[official_sicerco_data]" DisplayName="Run Query" ExistingDbConnection="[connect_database]" sap:VirtualizedContainerService.HintSize="416,138.4" sap2010:WorkflowViewState.IdRef="ExecuteQuery_10" Sql="SELECT*FROM [SICERCO$]&#xA;">
               <ui:ExecuteQuery.Parameters>
                 <scg:Dictionary x:TypeArguments="x:String, Argument" />
               </ui:ExecuteQuery.Parameters>
@@ -174,7 +174,7 @@
               </sap:WorkflowViewStateService.ViewState>
             </ui:ExecuteQuery>
           </Sequence>
-          <Sequence DisplayName="Desconectar conexiones excel" sap:VirtualizedContainerService.HintSize="450,131" sap2010:WorkflowViewState.IdRef="Sequence_11">
+          <Sequence DisplayName="Desconectar conexiones excel" sap:VirtualizedContainerService.HintSize="449.6,131.2" sap2010:WorkflowViewState.IdRef="Sequence_11">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -201,7 +201,7 @@
         </Catch>
       </TryCatch.Catches>
       <TryCatch.Finally>
-        <Sequence DisplayName="Finally" sap:VirtualizedContainerService.HintSize="484,90" sap2010:WorkflowViewState.IdRef="Sequence_31">
+        <Sequence DisplayName="Finally" sap:VirtualizedContainerService.HintSize="483.2,89.6" sap2010:WorkflowViewState.IdRef="Sequence_31">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
