@@ -9,8 +9,8 @@
       },
       "Url": null,
       "Arguments": {
-        "Value": "-jar \"\"\\\\10.10.15.120\\DatosRetie\\RETIEDICTAMENES\\1. SICERCO RETIE\\2. CARGUE A SICERCO\\2025\\0. CargueMasivo sicerco\\GeneradorCertificados.jar\"\" ",
-        "IsExpression": false
+        "Value": "\"-jar \"\"\\\\10.10.15.120\\DatosRetie\\RETIEDICTAMENES\\1. SICERCO RETIE\\2. CARGUE A SICERCO\\2025\\0. CargueMasivo\\GeneradorCertificados.jar\"\" \"",
+        "IsExpression": true
       },
       "Version": null
     },
@@ -35,7 +35,7 @@
       },
       "Url": null,
       "Arguments": {
-        "Value": "current_folder + \"\\\" + \"estructuraCargueMasivo.xlsx\"",
+        "Value": "emission_path",
         "IsExpression": true
       },
       "Version": null

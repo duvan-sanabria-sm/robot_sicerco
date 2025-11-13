@@ -1,0 +1,6 @@
+{
+  "Name": "cargo-sicerco",
+  "ProjectType": "Process",
+  "Description": "",
+  "MainFile": "Main.xaml"
+}

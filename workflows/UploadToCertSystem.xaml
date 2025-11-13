@@ -130,13 +130,13 @@
       <AssemblyReference>WindowsBase</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="UploadToCertSystem" sap:VirtualizedContainerService.HintSize="1229,2249" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="UploadToCertSystem" sap:VirtualizedContainerService.HintSize="1092,2243" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <Sequence DisplayName="Subida del documento al sistema de certificado" sap:VirtualizedContainerService.HintSize="1124,2226" sap2010:WorkflowViewState.IdRef="Sequence_3">
+    <Sequence DisplayName="Subida del documento al sistema de certificado" sap:VirtualizedContainerService.HintSize="1092,2220" sap2010:WorkflowViewState.IdRef="Sequence_3">
       <Sequence.Variables>
         <Variable x:TypeArguments="sd:DataTable" Name="clean_datas" />
       </Sequence.Variables>
@@ -146,25 +146,25 @@
           <x:Boolean x:Key="IsPinned">False</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[clean_data]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="1090,2143" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
+      <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[clean_data]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="1058,2137" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
         <ui:ForEachRow.Body>
           <ActivityAction x:TypeArguments="sd:DataRow">
             <ActivityAction.Argument>
               <DelegateInArgument x:TypeArguments="sd:DataRow" Name="CurrentRow" />
             </ActivityAction.Argument>
-            <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="1056,1956" sap2010:WorkflowViewState.IdRef="Sequence_8">
+            <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="1056,1964" sap2010:WorkflowViewState.IdRef="Sequence_8">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Superintendencia de Industria y Comercio." HealingAgentBehavior="Job" sap:VirtualizedContainerService.HintSize="1022,1896" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" IsDisplayNameAuto="True" ScopeGuid="df83355e-abe8-4bba-a9a1-7b99a8ef4e62" Version="V2">
+              <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Superintendencia de Industria y Comercio." HealingAgentBehavior="Job" sap:VirtualizedContainerService.HintSize="1022,1904" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" IsDisplayNameAuto="True" ScopeGuid="df83355e-abe8-4bba-a9a1-7b99a8ef4e62" Version="V2">
                 <uix:NApplicationCard.Body>
                   <ActivityAction x:TypeArguments="x:Object">
                     <ActivityAction.Argument>
                       <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
                     </ActivityAction.Argument>
-                    <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="988,1606" sap2010:WorkflowViewState.IdRef="Sequence_2">
+                    <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="988,1612" sap2010:WorkflowViewState.IdRef="Sequence_2">
                       <Sequence.Variables>
                         <Variable x:TypeArguments="x:Boolean" Name="check_window" />
                         <Variable x:TypeArguments="x:String" Name="text_error" />
@@ -176,12 +176,12 @@
                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
-                      <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Generar Certificados de…'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="954,189" sap2010:WorkflowViewState.IdRef="NClick_1" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="df83355e-abe8-4bba-a9a1-7b99a8ef4e62">
+                      <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Generar Certificados de…'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="954,190" sap2010:WorkflowViewState.IdRef="NClick_1" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="df83355e-abe8-4bba-a9a1-7b99a8ef4e62">
                         <uix:NClick.Target>
                           <uix:TargetAnchorable CVScreenId="bd6be312-9ee2-4760-8b27-9bf08b2d0a59" CvElementArea="63, 185, 322, 25" CvTextArea="123, 190, 201, 15" CvTextArgument="Generar Certificados de Inspeccion" CvType="Button" DesignTimeRectangle="66, 186, 317, 23" DesignTimeScaleFactor="1" ElementType="Button" FullSelectorArgument="&lt;java name='Generar Certificados de Inspección' role='push button' /&gt;" FuzzySelectorArgument="&lt;java name='Generar Certificados de Inspección' role='push button' check:text='Generar Certificados de Inspección' /&gt;" Guid="3f5c2eaa-c570-428c-a279-fcccaea81651" InformativeScreenshot="4dff3c8b84e60c16917052b688310cba.png" ScopeSelectorArgument="&lt;wnd app='java*.exe' cls='SunAwtDialog' title='Superintendencia de Industria y Comercio.' /&gt;" SearchSteps="Selector, FuzzySelector, CV" Version="V5" Visibility="Interactive" />
                         </uix:NClick.Target>
                       </uix:NClick>
-                      <uix:NSetText DisplayName="Set Text 'Nombre de carpeta'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="954,194" sap2010:WorkflowViewState.IdRef="NSetText_4" ScopeIdentifier="df83355e-abe8-4bba-a9a1-7b99a8ef4e62" Text="[CurrentRow(&quot;Rutas&quot;).ToString]" Version="V4">
+                      <uix:NSetText DisplayName="Set Text 'Nombre de carpeta'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="954,195" sap2010:WorkflowViewState.IdRef="NSetText_4" ScopeIdentifier="df83355e-abe8-4bba-a9a1-7b99a8ef4e62" Text="[CurrentRow(&quot;Rutas&quot;).ToString]" Version="V4">
                         <uix:NSetText.Target>
                           <uix:TargetAnchorable CVScreenId="8a545af5-ec04-4d8a-9fb6-625ff6a68470" CvElementArea="141, 253, 387, 20" CvType="InputBox" DesignTimeRectangle="143, 253, 389, 20" DesignTimeScaleFactor="1" ElementType="InputBox" FullSelectorArgument="&lt;java name='Nombre de carpeta:' role='text' /&gt;" FuzzySelectorArgument="&lt;java name='Nombre de carpeta:' role='text' /&gt;" Guid="e6df15d4-f30f-4a49-9eed-732b3b5e0e1f" InformativeScreenshot="66880d92adf8f46bae1f0b4be658192a.png" IsResponsive="True" ScopeSelectorArgument="&lt;wnd app='java*.exe' cls='SunAwtDialog' title='Guardar' /&gt;" SearchSteps="Selector, FuzzySelector, CV" Version="V5" Visibility="Interactive">
                             <uix:TargetAnchorable.Anchors>
@@ -192,7 +192,7 @@
                           </uix:TargetAnchorable>
                         </uix:NSetText.Target>
                       </uix:NSetText>
-                      <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Guardar'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="954,225" sap2010:WorkflowViewState.IdRef="NClick_2" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="df83355e-abe8-4bba-a9a1-7b99a8ef4e62" Version="V4">
+                      <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Guardar'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="954,227" sap2010:WorkflowViewState.IdRef="NClick_2" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="df83355e-abe8-4bba-a9a1-7b99a8ef4e62" Version="V4">
                         <uix:NClick.Target>
                           <uix:TargetAnchorable CVScreenId="46e5a5a6-a175-45c7-9344-8d768be1d194" CvElementArea="356, 320, 86, 26" CvTextArea="375, 327, 48, 12" CvTextArgument="Guardar" CvType="Button" DesignTimeRectangle="357, 320, 85, 26" DesignTimeScaleFactor="1" ElementType="Button" FullSelectorArgument="&lt;java name='Guardar' role='push button' /&gt;" FuzzySelectorArgument="&lt;java name='Guardar' role='push button' check:text='Guardar' /&gt;" Guid="9cc3e29b-cdd1-4616-94cc-d0e91d5c6a18" InformativeScreenshot="03d875b2779a819f274d9c28ffef8da3.png" ScopeSelectorArgument="&lt;wnd app='java*.exe' cls='SunAwtDialog' title='Guardar' /&gt;" SearchSteps="Selector, FuzzySelector, CV" Version="V5" Visibility="Interactive">
                             <uix:TargetAnchorable.Anchors>
@@ -213,7 +213,7 @@
                           </uix:VerifyExecutionOptions>
                         </uix:NClick.VerifyOptions>
                       </uix:NClick>
-                      <uix:NCheckState DisplayName="Check App State 'Mensaje'" sap:VirtualizedContainerService.HintSize="954,936" sap2010:WorkflowViewState.IdRef="NCheckState_1" ScopeIdentifier="df83355e-abe8-4bba-a9a1-7b99a8ef4e62" Timeout="30" Version="V4">
+                      <uix:NCheckState DisplayName="Check App State 'Mensaje'" sap:VirtualizedContainerService.HintSize="954,938" sap2010:WorkflowViewState.IdRef="NCheckState_1" ScopeIdentifier="df83355e-abe8-4bba-a9a1-7b99a8ef4e62" Timeout="30" Version="V4">
                         <uix:NCheckState.IfExists>
                           <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="450,627" sap2010:WorkflowViewState.IdRef="Sequence_24">
                             <sap:WorkflowViewStateService.ViewState>
@@ -330,7 +330,7 @@
                   </ActivityAction>
                 </uix:NApplicationCard.Body>
                 <uix:NApplicationCard.TargetApp>
-                  <uix:TargetApp Area="735, 340, 450, 352" Arguments="-jar &quot;&quot;\\10.10.15.120\DatosRetie\RETIEDICTAMENES\1. SICERCO RETIE\2. CARGUE A SICERCO\2025\0. CargueMasivo sicerco\GeneradorCertificados.jar&quot;&quot; " ContentHash="9oc1dulLEUmv_RON4rowTw" FilePath="C:\Program Files (x86)\Java\jre1.8.0_441\bin\javaw.exe" IconBase64="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" InformativeScreenshot="a0c12f39518ce6cebe8b64a609372400.png" Reference="hbAC0x9AP0udkm6GeCl4UA/JQmOgYX7z0Gx4EZFrULdMg" Selector="&lt;wnd app='java*.exe' cls='SunAwtDialog' title='Superintendencia de Industria y Comercio.' /&gt;" Version="V2" />
+                  <uix:TargetApp Area="735, 340, 450, 352" Arguments="[&quot;-jar &quot;&quot;\\10.10.15.120\DatosRetie\RETIEDICTAMENES\1. SICERCO RETIE\2. CARGUE A SICERCO\2025\0. CargueMasivo\GeneradorCertificados.jar&quot;&quot; &quot;]" FilePath="C:\Program Files (x86)\Java\jre1.8.0_441\bin\javaw.exe" IconBase64="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" sap2010:WorkflowViewState.IdRef="TargetApp_1" InformativeScreenshot="a0c12f39518ce6cebe8b64a609372400.png" Selector="&lt;wnd app='java*.exe' cls='SunAwtDialog' title='Superintendencia de Industria y Comercio.' /&gt;" Version="V2" />
                 </uix:NApplicationCard.TargetApp>
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">

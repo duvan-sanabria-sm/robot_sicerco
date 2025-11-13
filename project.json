@@ -19,7 +19,7 @@
   "entitiesStores": [],
   "schemaVersion": "4.0",
   "studioVersion": "24.10.1.0",
-  "projectVersion": "1.0.14-alpha.2",
+  "projectVersion": "1.0.14-alpha.4",
   "runtimeOptions": {
     "autoDispose": false,
     "netFrameworkLazyLoading": false,
@@ -42,15 +42,13 @@
     "projectProfile": "Developement",
     "outputType": "Process",
     "libraryOptions": {
-      "includeOriginalXaml": false,
       "privateWorkflows": []
     },
     "processOptions": {
       "ignoredFiles": []
     },
     "fileInfoCollection": [],
-    "saveToCloud": false,
-    "cloudProjectUrl": "https://cloud.uipath.com/servilnsjitn/studio_/designer/b1a74160-b8e0-4316-8e99-b4805b9cb171"
+    "saveToCloud": false
   },
   "arguments": {
     "input": [],
