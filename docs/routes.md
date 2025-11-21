@@ -40,7 +40,7 @@
       </td>
       <td>
         <b>📦 Ruta extracción de dictámenes --> OriginalyCopia</b>
-        <pre><code>\\10.10.15.120\DatosRetie\RETIEDICTAMENES\4. ORIGINAL Y COPIA\COPIA\</code></pre>
+        <pre><code>\\10.10.15.120\DatosRetie\RETIEDICTAMENES\4. ORIGINAL Y COPIA\COPIA</code></pre>
       </td>
     </tr>
     <tr>
@@ -61,7 +61,7 @@
       </td>
       <td>
         <b>🗃️ Ruta general --> CargueSicerco</b>
-        <pre><code>\\10.10.15.120\DatosRetie\RETIEDICTAMENES\1. SICERCO RETIE\2. CARGUE A SICERCO</code></pre>
+        <pre><code>\\10.10.15.120\DatosRetie\RETIEDICTAMENES\1. SICERCO RETIE\2. CARGUE A SICERCO\</code></pre>
       </td>
     </tr>  
       <tr>
@@ -84,7 +84,7 @@
       </td>
       <td>
         <b>📦 Ruta java --> Java</b>
-        <pre><code>C:\Program Files\Java\jre1.8.0_471\bin\javaw.exe
+        <pre><code>C:\Program Files\Java\jre1.8.0_451\bin\javaw.exe
 </code></pre>
       </td>
     </tr>
